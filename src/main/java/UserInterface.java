@@ -23,6 +23,8 @@ public class UserInterface {
                 break;
                 case "exit":
                 System.out.println("Shutting down the program");
+                System.exit(0);
+
                 break;
             }
 
