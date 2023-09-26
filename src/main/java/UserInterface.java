@@ -15,12 +15,31 @@ public class UserInterface {
 
             switch (userchoice.toLowerCase()){
                 case "look":
-                    System.out.println();
-                System.out.println("Looking around");
-                break;
+                    adventure.lookAround();
+                    break;
                 case "help":
-                System.out.println("Type a direction (North,South,West,East) to go in that direction");
-                break;
+                    System.out.println("Type a direction (North,South,West,East) to go in that direction");
+                    break;
+                case "go east":
+                    System.out.println("Going east");
+                    adventure.goEast();
+                    adventure.lookAround();
+                    break;
+                case "go north":
+                    System.out.println("Going north");
+                    adventure.goNorth();
+                    adventure.lookAround();
+                    break;
+                case "go west":
+                    System.out.println("Going west");
+                    adventure.goWest();
+                    adventure.lookAround();
+                    break;
+                case "go south":
+                    System.out.println("Going south");
+                    adventure.goSouth();
+                    adventure.lookAround();
+                    break;
                 case "exit":
                 System.out.println("Shutting down the program");
                 System.exit(0);
