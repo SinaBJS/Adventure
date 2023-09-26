@@ -48,13 +48,29 @@ public class Adventure {
         System.out.println(currentRoom.getDescription());
     }
     public void goEast(){
-        currentRoom = currentRoom.east;
+        if (currentRoom.east == null) {
+            System.out.println("I can't go this way.");
+        }else {
+            System.out.println("Going east...");
+            currentRoom = currentRoom.east;
+        }
     }
     public void goNorth(){
-        currentRoom = currentRoom.north;
+        if (currentRoom.north == null){
+            System.out.println("I can't go this way.");
+        }else {
+            System.out.println("Going north...");
+            currentRoom = currentRoom.north;
+        }
+
     }
     public void goWest(){
-        currentRoom = currentRoom.west;
+        if (currentRoom.west == null){
+            System.out.println("I cant go this way.");
+        }else {
+            System.out.println("Going west...");
+            currentRoom = currentRoom.west;
+        }
 
     }
     public void goSouth(){
