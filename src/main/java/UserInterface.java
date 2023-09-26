@@ -15,38 +15,33 @@ public class UserInterface {
         while (true) {
             String userchoice = keyboard.nextLine();
 
-
-            switch (userchoice.toLowerCase()){
-                case "look":
-                    adventure.lookAround();
-                    break;
-                case "help":
-                    System.out.println("Type a direction (North,South,West,East) to go in that direction");
-                    break;
-                case "go east":
-                    System.out.println("Going east");
+            switch (userchoice.toLowerCase()) {
+                case "look" -> adventure.lookAround();
+                case "help" -> System.out.println("Type a direction (North,South,West,East) to go in that direction");
+                case "go east", "east", "e" -> {
                     adventure.goEast();
+                    System.out.println("Going east");
                     adventure.lookAround();
-                    break;
-                case "go north":
-                    System.out.println("Going north");
+                }
+                case "go north", "north", "n" -> {
                     adventure.goNorth();
-                    adventure.lookAround();
-                    break;
-                case "go west":
-                    System.out.println("Going west");
+                    System.out.println("Going north");
+                    //adventure.lookAround();
+                }
+                case "go west", "west", "w" -> {
                     adventure.goWest();
+                    System.out.println("Going west");
                     adventure.lookAround();
-                    break;
-                case "go south":
-                    System.out.println("Going south");
+                }
+                case "go south", "south", "s" -> {
                     adventure.goSouth();
+                    System.out.println("Going south");
                     adventure.lookAround();
-                    break;
-                case "exit":
+                }
+                case "exit" -> {
                     System.out.println("Shutting down the program");
                     System.exit(0);
-                    break;
+                }
             }
 
 

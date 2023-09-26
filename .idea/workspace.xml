@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="First commit. Main, adventure og room klasser oprettet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" name="Changes by lasse" comment="">
+    <list id="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" name="Changes by lasse" comment="Changes by lasse">
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,27 +26,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="11" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
-        <range start1="17" end1="20" start2="20" end2="22" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="21" end1="23" start2="23" end2="45" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="24" end1="28" start2="46" end2="49" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="35" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="4" end1="5" start2="36" end2="38" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="6" end1="6" start2="39" end2="49" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="7" end1="8" start2="50" end2="51" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
-        <range start1="10" end1="11" start2="53" end2="54" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="13" end1="13" start2="56" end2="57" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
-        <range start1="16" end1="17" start2="60" end2="61" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -59,22 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/sina7/Desktop/Java projekter/FamilyTreeExercise/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sina7/Desktop/Java projekter/FamilyTreeExercise/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695643792406</updated>
       <workItem from="1695643793484" duration="3521000" />
-      <workItem from="1695724354104" duration="2644000" />
+      <workItem from="1695724354104" duration="4095000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -110,7 +86,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695647766181</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First commit. Main, adventure og room klasser oprettet">
+      <option name="closed" value="true" />
+      <created>1695727008410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695727008410</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changes by lasse">
+      <option name="closed" value="true" />
+      <created>1695727197412</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695727197412</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Main, adventure og room klasser oprettet" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit. Main, adventure og room klasser oprettet" />
+    <MESSAGE value="Changes by lasse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by lasse" />
   </component>
 </project>

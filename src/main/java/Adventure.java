@@ -58,6 +58,12 @@ public class Adventure {
 
     }
     public void goSouth(){
-        currentRoom = currentRoom.south;
+        if (currentRoom.south==null){
+            System.out.println("I can't go this way.");
+        }else{
+            System.out.println("Going south...");
+            currentRoom = currentRoom.south;
+        }
+
     }
 }
