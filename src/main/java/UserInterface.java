@@ -6,6 +6,9 @@ public class UserInterface {
     public void start() {
         Scanner keyboard = new Scanner(System.in);
 
+        Adventure adventure = new Adventure();
+        adventure.buildMap();
+
         System.out.println("Type look to look around ");
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
@@ -41,10 +44,9 @@ public class UserInterface {
                     adventure.lookAround();
                     break;
                 case "exit":
-                System.out.println("Shutting down the program");
-                System.exit(0);
-
-                break;
+                    System.out.println("Shutting down the program");
+                    System.exit(0);
+                    break;
             }
 
 

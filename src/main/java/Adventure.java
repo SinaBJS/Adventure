@@ -48,12 +48,13 @@ public class Adventure {
         System.out.println(currentRoom.getDescription());
     }
     public void goEast(){
-
+        currentRoom = currentRoom.east;
     }
     public void goNorth(){
         currentRoom = currentRoom.north;
     }
     public void goWest(){
+        currentRoom = currentRoom.west;
 
     }
     public void goSouth(){
