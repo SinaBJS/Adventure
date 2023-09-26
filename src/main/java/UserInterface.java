@@ -17,10 +17,9 @@ public class UserInterface {
 
             switch (userchoice.toLowerCase()) {
                 case "look" -> adventure.lookAround();
-                case "help" -> System.out.println("Type a direction (North,South,West,East) to go in that direction");
+                case "help" -> System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                 case "go east", "east", "e" -> {
                     adventure.goEast();
-                    System.out.println("Going east");
                     adventure.lookAround();
                 }
                 case "go north", "north", "n" -> {
@@ -35,7 +34,6 @@ public class UserInterface {
                 }
                 case "go south", "south", "s" -> {
                     adventure.goSouth();
-                    System.out.println("Going south");
                     adventure.lookAround();
                 }
                 case "exit" -> {

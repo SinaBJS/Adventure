@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="First commit. Main, adventure og room klasser oprettet">
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Delopgave 1 færdig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" name="Changes by lasse" comment="Changes by lasse">
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="19" end1="20" start2="20" end2="21" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="22" end1="23" start2="23" end2="23" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="27" end1="29" start2="27" end2="28" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="32" end1="33" start2="31" end2="31" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="37" end1="38" start2="35" end2="35" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="40" end1="40" start2="37" end2="46" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="6" end1="15" start2="7" end2="16" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="41" end1="42" start2="42" end2="42" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="47" end1="47" start2="47" end2="50" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="82" end1="83" start2="85" end2="85" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+        <range start1="84" end1="84" start2="86" end2="94" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Room.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="7" end1="9" start2="8" end2="10" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="11" end1="11" start2="12" end2="13" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="12" end1="12" start2="14" end2="29" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="20" end1="20" start2="37" end2="41" changelist="a8f17e90-1159-4adc-a5ca-bf88c3c37f46" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -60,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695643792406</updated>
       <workItem from="1695643793484" duration="3521000" />
-      <workItem from="1695724354104" duration="4095000" />
+      <workItem from="1695724354104" duration="8353000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -102,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695727197412</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Delopgave 1 færdig">
+      <option name="closed" value="true" />
+      <created>1695728713094</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695728713094</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by lasse">
+      <option name="closed" value="true" />
+      <created>1695728718053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695728718053</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Main, adventure og room klasser oprettet" />
+    <MESSAGE value="Delopgave 1 færdig" />
     <MESSAGE value="Changes by lasse" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes by lasse" />
   </component>
