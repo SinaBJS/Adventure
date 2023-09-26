@@ -6,6 +6,7 @@ public class UserInterface {
     public void start() {
         Scanner keyboard = new Scanner(System.in);
 
+
         Adventure adventure = new Adventure();
         adventure.buildMap();
 
@@ -24,18 +25,25 @@ public class UserInterface {
                 }
                 case "go north", "north", "n" -> {
                     adventure.goNorth();
-                    System.out.println("Going north");
-                    //adventure.lookAround();
+                    adventure.lookAround();
                 }
                 case "go west", "west", "w" -> {
                     adventure.goWest();
-                    System.out.println("Going west");
                     adventure.lookAround();
                 }
                 case "go south", "south", "s" -> {
                     adventure.goSouth();
                     adventure.lookAround();
                 }
+                case "turn on", "light on" ->{
+
+                }
+
+
+                    case "turn off", "light off" ->{
+
+                    }
+
                 case "exit" -> {
                     System.out.println("Shutting down the program");
                     System.exit(0);

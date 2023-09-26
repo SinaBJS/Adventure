@@ -2,6 +2,7 @@ public class Adventure {
 
 
     private Room currentRoom;
+    private Room room1;
 
     public void buildMap(){
         Room room1 = new Room("Room 1", "rum 1", false);
@@ -39,12 +40,14 @@ public class Adventure {
 
         room4.setSouthRoom(room7);
         room4.setNorthRoom(room1);
-
         //start room
         currentRoom = room1;
     }
 
     public void lookAround(){
+        if (currentRoom.getIsLightOn()==false){
+            System.out.println("Darkness surrounds you. You should turn on a light.");
+        }else
         System.out.println(currentRoom.getDescription());
     }
     public void goEast(){
@@ -80,6 +83,13 @@ public class Adventure {
             System.out.println("Going south...");
             currentRoom = currentRoom.south;
         }
-
     }
+
+   /* public void xyzzy(){
+        currentRoom = room1;
+
+
+        System.out.println("You just teleported");
+    }
+*/
 }

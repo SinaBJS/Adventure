@@ -36,6 +36,10 @@ public class Room {
         return name;
     }
 
+    public void setLightOn(boolean lightOn) {
+        this.lightOn = lightOn;
+    }
+
     public void setEastRoom(Room room) {
         this.east = room;
     }
