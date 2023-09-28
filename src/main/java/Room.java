@@ -23,6 +23,7 @@ public class Room {
         this.lightOn = false;
         System.out.println("You extingiush a torch hanging on the wall, and the light in the room dies");
     }
+
     public boolean getIsLightOn() {
         return lightOn;
     }
@@ -42,15 +43,34 @@ public class Room {
 
     public void setEastRoom(Room room) {
         this.east = room;
+        if (room != null) ;
+        {
+            room.west = this;
+        }
 
     }
+
     public void setWestRoom(Room room) {
         this.west = room;
+        if (room != null) ;
+        {
+            room.east = this;
+        }
     }
+
     public void setSouthRoom(Room room) {
         this.south = room;
+        if (room != null) ;
+        {
+            room.north = this;
+        }
     }
+
     public void setNorthRoom(Room room) {
-        this.north=room;
+        this.north = room;
+        if (room != null) ;
+        {
+            room.south = this;
+        }
     }
 }

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Delopgave 1 færdig">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Map klasse oprettet.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
@@ -59,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695643792406</updated>
       <workItem from="1695643793484" duration="3521000" />
-      <workItem from="1695724354104" duration="11232000" />
+      <workItem from="1695724354104" duration="12999000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -133,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695732736589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Map klasse oprettet.">
+      <option name="closed" value="true" />
+      <created>1695885937423</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695885937423</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +152,7 @@
     <MESSAGE value="First commit. Main, adventure og room klasser oprettet" />
     <MESSAGE value="Delopgave 1 færdig" />
     <MESSAGE value="Changes by lasse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by lasse" />
+    <MESSAGE value="Map klasse oprettet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Map klasse oprettet." />
   </component>
 </project>
