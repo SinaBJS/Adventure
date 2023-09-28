@@ -1,10 +1,15 @@
 public class Adventure {
 
-
     private Room currentRoom;
     private Room room1;
 
-    public void buildMap(){
+    public Adventure(){
+        Map map = new Map();
+        map.buildMap();
+        currentRoom=map.getStartingRoom();
+    }
+
+    /*public void buildMap(){
         Room room1 = new Room("Room 1", "rum 1", false);
         Room room2 = new Room("Room 2", "rum 2", true);
         Room room3 = new Room("Room 3", "rum 3", true);
@@ -42,7 +47,7 @@ public class Adventure {
         room4.setNorthRoom(room1);
         //start room
         currentRoom = room1;
-    }
+    }*/
 
     public void lookAround(){
         if (currentRoom.getIsLightOn()==false){

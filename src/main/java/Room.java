@@ -6,7 +6,7 @@ public class Room {
     public Room west;
     public Room south;
     public Room north;
-    
+
     public Room(String name, String description, boolean lightOn) {
         this.name = name;
         this.description = description;
@@ -42,6 +42,7 @@ public class Room {
 
     public void setEastRoom(Room room) {
         this.east = room;
+
     }
     public void setWestRoom(Room room) {
         this.west = room;

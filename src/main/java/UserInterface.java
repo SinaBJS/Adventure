@@ -8,7 +8,8 @@ public class UserInterface {
 
 
         Adventure adventure = new Adventure();
-        adventure.buildMap();
+
+
 
         System.out.println("Type look to look around ");
         System.out.println("Type help for instructions");
@@ -16,7 +17,7 @@ public class UserInterface {
         while (true) {
             String userchoice = keyboard.nextLine();
 
-            switch (userchoice.toLowerCase()) {
+            switch (userchoice.trim().toLowerCase()) {
                 case "look" -> adventure.lookAround();
                 case "help" -> System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                 case "go east", "east", "e" -> {
