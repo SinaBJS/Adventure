@@ -3,6 +3,9 @@ public class Map {
 
 
     public void buildMap() {
+        Item sword = new Item("sword", "a sharp weapon");
+        Item knife = new Item("knife", "a sharp little weapon");
+
         Room room1 = new Room("Room 1", "rum 1", false);
         Room room2 = new Room("Room 2", "rum 2", true);
         Room room3 = new Room("Room 3", "rum 3", true);
@@ -13,6 +16,15 @@ public class Map {
         Room room8 = new Room("Room 8", "rum 8", true);
         Room room9 = new Room("Room 9", "rum 9", true);
 
+
+        //add items to rooms
+        room1.addItem(knife);
+        room1.addItem(sword);
+        room2.addItem(sword);
+        room2.addItem(knife);
+
+
+        //attach rooms
         room1.setEastRoom(room2);
         room2.setEastRoom(room3);
         room3.setSouthRoom(room6);

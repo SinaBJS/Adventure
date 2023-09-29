@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" name="Changes by sina7" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,44 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "LasseThomsenSkole"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b0d0f87c-8897-43d4-9426-02a505baf086" />
+        <option name="url" value="https://github.com/SinaBJS/Adventure.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Room.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="8" end1="8" start2="10" end2="11" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="13" end1="13" start2="16" end2="17" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="14" end1="14" start2="18" end2="21" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="45" end1="47" start2="52" end2="53" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="54" end1="56" start2="60" end2="61" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="62" end1="64" start2="67" end2="68" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="70" end1="72" start2="74" end2="75" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="75" end1="75" start2="78" end2="82" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="2" end1="3" start2="4" end2="5" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="6" end1="6" start2="8" end2="9" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="45" end1="50" start2="48" end2="62" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="52" end1="52" start2="64" end2="96" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0

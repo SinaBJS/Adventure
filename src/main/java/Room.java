@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Room {
     public String name;
     public String description;
@@ -6,11 +8,15 @@ public class Room {
     public Room west;
     public Room south;
     public Room north;
+    public ArrayList<Item> items = new ArrayList<>();
 
     public Room(String name, String description, boolean lightOn) {
         this.name = name;
         this.description = description;
         this.lightOn = lightOn;
+    }
+    public ArrayList<Item> getItems(){
+        return items;
     }
 
     public void turnOn() {
@@ -43,8 +49,7 @@ public class Room {
 
     public void setEastRoom(Room room) {
         this.east = room;
-        if (room != null) ;
-        {
+        if (room != null) {
             room.west = this;
         }
 
@@ -52,25 +57,26 @@ public class Room {
 
     public void setWestRoom(Room room) {
         this.west = room;
-        if (room != null) ;
-        {
+        if (room != null) {
             room.east = this;
         }
     }
 
     public void setSouthRoom(Room room) {
         this.south = room;
-        if (room != null) ;
-        {
+        if (room != null) {
             room.north = this;
         }
     }
 
     public void setNorthRoom(Room room) {
         this.north = room;
-        if (room != null) ;
-        {
+        if (room != null) {
             room.south = this;
         }
+    }
+
+    public void addItem(Item item) {
+        items.add(item);
     }
 }
