@@ -17,10 +17,10 @@ public class UserInterface {
             String userchoice = keyboard.nextLine();
 
             switch (userchoice.trim().toLowerCase()) {
-                case "look" -> {
+                case "look", "l" -> {
                     player.lookAround();
                 }
-                case "help" ->
+                case "help", "h"->
                         System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                 case "go east", "east", "e" -> {
                     player.goEast();
@@ -38,13 +38,13 @@ public class UserInterface {
                     player.goSouth();
                     player.lookAround();
                 }
-                case "take" ->{
+                case "take", "t" ->{
                     System.out.println("What item do you wish to take?");
                     String chosenItem = keyboard.nextLine();
                     player.takeItem(chosenItem);
 
                 }
-                case "drop" ->{
+                case "drop", "d" ->{
                     System.out.println("What item do you wish to take?");
                     String chosenItem = keyboard.nextLine();
                     player.dropItem(chosenItem);

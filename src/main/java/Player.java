@@ -51,6 +51,7 @@ public class Player {
             currentRoom = currentRoom.south;
         }
     }
+
     public void lookAround() {
         if (!currentRoom.getIsLightOn()) {
             System.out.println("Darkness surrounds you. You should turn on a light.");
@@ -69,7 +70,7 @@ public class Player {
     }
     //TODO find item method
 
-    public void takeItem (String name) {
+    public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemTaken = new ArrayList<>();
         for (Item item : itemArrayList) {
@@ -83,15 +84,15 @@ public class Player {
         itemArrayList.removeAll(itemTaken);
     }
 
-    public void dropItem (String name){
+    public void dropItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemDropped = new ArrayList<>();
-            for (Item item : inventory) {
-                    if (item.getName().contains(name)) {
-                        itemDropped.add(item);
-                        itemArrayList.add(item);
-                        System.out.println("You have dropped " + item.getName());
-                    }
+        for (Item item : inventory) {
+            if (item.getName().contains(name)) {
+                itemDropped.add(item);
+                itemArrayList.add(item);
+                System.out.println("You have dropped " + item.getName());
+            }
 
         }
         inventory.removeAll(itemDropped);
