@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Map klasse oprettet.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695643792406</updated>
       <workItem from="1695643793484" duration="3521000" />
-      <workItem from="1695724354104" duration="12999000" />
+      <workItem from="1695724354104" duration="17861000" />
+      <workItem from="1695969517495" duration="2957000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -142,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695885937423</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej.">
+      <option name="closed" value="true" />
+      <created>1695887670080</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695887670080</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +162,7 @@
     <MESSAGE value="Delopgave 1 færdig" />
     <MESSAGE value="Changes by lasse" />
     <MESSAGE value="Map klasse oprettet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Map klasse oprettet." />
+    <MESSAGE value="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej." />
+    <option name="LAST_COMMIT_MESSAGE" value="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej." />
   </component>
 </project>

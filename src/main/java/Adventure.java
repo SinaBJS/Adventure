@@ -1,23 +1,22 @@
 public class Adventure {
 
-    private Room currentRoom;
-    private Room room1;
+    public Player getPlayer() {
+        return player;
+    }
+
+    private Player player;
 
     public Adventure() {
         Map map = new Map();
         map.buildMap();
-        currentRoom = map.getStartingRoom();
+        Room startingRoom = map.getStartingRoom();
+        player = new Player(startingRoom);
+
     }
 
 
-    public void lookAround() {
-        if (currentRoom.getIsLightOn() == false) {
-            System.out.println("Darkness surrounds you. You should turn on a light.");
-        } else
-            System.out.println(currentRoom.getDescription());
-    }
 
-    public void goEast() {
+    /*public void goEast() {
         if (currentRoom.east == null) {
             System.out.println("I can't go this way.");
         } else {
@@ -54,6 +53,9 @@ public class Adventure {
             currentRoom = currentRoom.south;
         }
     }
+    public Room getCurrentRoom(){
+        return currentRoom;
+    }*/
 
    /* public void xyzzy(){
         currentRoom = room1;

@@ -5,36 +5,34 @@ public class UserInterface {
 
     public void start() {
         Scanner keyboard = new Scanner(System.in);
-
-
         Adventure adventure = new Adventure();
-
 
         System.out.println("Type look to look around ");
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
+        Player player =adventure.getPlayer();
         while (true) {
             String userchoice = keyboard.nextLine();
 
             switch (userchoice.trim().toLowerCase()) {
-                case "look" -> adventure.lookAround();
+                case "look" -> player.lookAround();
                 case "help" ->
                         System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                 case "go east", "east", "e" -> {
-                    adventure.goEast();
-                    adventure.lookAround();
+                    player.goEast();
+                    player.lookAround();
                 }
                 case "go north", "north", "n" -> {
-                    adventure.goNorth();
-                    adventure.lookAround();
+                    player.goNorth();
+                    player.lookAround();
                 }
                 case "go west", "west", "w" -> {
-                    adventure.goWest();
-                    adventure.lookAround();
+                    adventure.getPlayer().goWest();
+                    player.lookAround();
                 }
                 case "go south", "south", "s" -> {
-                    adventure.goSouth();
-                    adventure.lookAround();
+                    player.goSouth();
+                   player.lookAround();
                 }
                 case "turn on", "light on" -> {
 

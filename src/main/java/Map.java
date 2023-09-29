@@ -1,5 +1,4 @@
 public class Map {
-    private Room currentRoom;
     private Room startingRoom;
 
 
