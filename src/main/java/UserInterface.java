@@ -52,6 +52,9 @@ public class UserInterface {
                 case "turn on", "light on" -> {
 
                 }
+                case "inventory", "inv", "i" ->{
+                    player.printInventory();
+                }
 
 
                 case "turn off", "light off" -> {

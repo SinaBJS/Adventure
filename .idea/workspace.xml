@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="item class created, inventory added, take and drop method added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" name="Changes by sina7" comment="">
+    <list id="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" name="Changes by sina7" comment="Changes by sina7">
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,26 +42,16 @@
     </option>
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="8" end1="8" start2="10" end2="11" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="13" end1="13" start2="16" end2="17" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
-        <range start1="14" end1="14" start2="18" end2="21" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="45" end1="47" start2="52" end2="53" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="54" end1="56" start2="60" end2="61" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="62" end1="64" start2="67" end2="68" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="70" end1="72" start2="74" end2="75" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="75" end1="75" start2="78" end2="82" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/Player.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="2" end1="3" start2="4" end2="5" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="6" end1="6" start2="8" end2="9" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
-        <range start1="45" end1="50" start2="48" end2="62" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="52" end1="52" start2="64" end2="96" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="6" end1="7" start2="6" end2="7" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="11" end1="11" start2="11" end2="16" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="48" end1="48" start2="53" end2="54" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="66" end1="67" start2="72" end2="73" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="80" end1="81" start2="86" end2="87" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="83" end1="89" start2="89" end2="95" changelist="1a8c46f7-c85b-4df8-9a48-8f259a5fa17a" />
+        <range start1="90" end1="93" start2="96" end2="107" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="94" end1="94" start2="108" end2="111" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
       </ranges>
     </file>
   </component>
@@ -195,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695887670080</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="item class created, inventory added, take and drop method added">
+      <option name="closed" value="true" />
+      <created>1695980044517</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695980044517</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by sina7">
+      <option name="closed" value="true" />
+      <created>1695980051545</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695980051545</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +208,8 @@
     <MESSAGE value="Changes by lasse" />
     <MESSAGE value="Map klasse oprettet." />
     <MESSAGE value="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej." />
-    <option name="LAST_COMMIT_MESSAGE" value="Når forbindelsen mellem rum bliver oprettet den ene vej bliver den også oprettet den anden vej." />
+    <MESSAGE value="item class created, inventory added, take and drop method added" />
+    <MESSAGE value="Changes by sina7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by sina7" />
   </component>
 </project>

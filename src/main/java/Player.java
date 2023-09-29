@@ -4,10 +4,15 @@ public class Player {
     private Room currentRoom;
     ArrayList<Item> inventory = new ArrayList<>();
 
-    public Player (Room startingRoom){
+    public Player(Room startingRoom) {
         this.currentRoom = startingRoom;
 
     }
+
+    /*
+    Item rock = new Item("rock", "bigger than a pebble");
+    Item snake = new Item("snake", "a snake");
+    */
 
     public void goEast() {
         if (currentRoom.east == null) {
@@ -88,10 +93,21 @@ public class Player {
                         System.out.println("You have dropped " + item.getName());
                     }
 
-                }
-            inventory.removeAll(itemDropped);
-            }
         }
+        inventory.removeAll(itemDropped);
+    }
+
+    public void printInventory() {
+        if(inventory.isEmpty()){
+        System.out.println("Your inventory is empty.");
+     }else{
+        for (Item item : inventory) {
+            System.out.println(item.getName() + ": " + item.getDescription());
+        }
+        }
+    }
+}
+
 
 
 
