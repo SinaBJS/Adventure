@@ -6,6 +6,7 @@ public class Player {
 
     public Player (Room startingRoom){
         this.currentRoom = startingRoom;
+
     }
 
     public void goEast() {

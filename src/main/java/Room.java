@@ -14,6 +14,7 @@ public class Room {
         this.name = name;
         this.description = description;
         this.lightOn = lightOn;
+
     }
     public ArrayList<Item> getItems(){
         return items;
