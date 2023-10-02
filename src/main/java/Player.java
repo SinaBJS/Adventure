@@ -1,10 +1,18 @@
+import java.util.ArrayList;
+
 public class Player {
     private Room currentRoom;
+    ArrayList<Item> inventory = new ArrayList<>();
 
-
-    public Player (Room startingRoom){
+    public Player(Room startingRoom) {
         this.currentRoom = startingRoom;
+
     }
+
+    /*
+    Item rock = new Item("rock", "bigger than a pebble");
+    Item snake = new Item("snake", "a snake");
+    */
 
     public void goEast() {
         if (currentRoom.east == null) {
@@ -43,11 +51,64 @@ public class Player {
             currentRoom = currentRoom.south;
         }
     }
-        public void lookAround() {
-            if (currentRoom.getIsLightOn() == false) {
-                System.out.println("Darkness surrounds you. You should turn on a light.");
-            } else
-                System.out.println(currentRoom.getDescription());
+
+    public void lookAround() {
+        if (!currentRoom.getIsLightOn()) {
+            System.out.println("Darkness surrounds you. You should turn on a light.");
+        } else if (!currentRoom.getItems().isEmpty() && currentRoom.getIsLightOn()) {
+            System.out.println(currentRoom.getDescription());
+
+            System.out.println("There is following items in the room");
+
+            for (Item item : currentRoom.getItems()) {
+                System.out.println(item.getName() + " " + item.getDescription());
+            }
+
+        } else if (currentRoom.getIsLightOn()) {
+            System.out.println(currentRoom.getDescription());
         }
     }
+    //TODO find item method
+
+    public void takeItem(String name) {
+        ArrayList<Item> itemArrayList = currentRoom.getItems();
+        ArrayList<Item> itemTaken = new ArrayList<>();
+        for (Item item : itemArrayList) {
+            if (item.getName().contains(name)) {
+                itemTaken.add(item);
+                inventory.add(item);
+                System.out.println("You have taken " + item.getName());
+            }
+        }
+
+        itemArrayList.removeAll(itemTaken);
+    }
+
+    public void dropItem(String name) {
+        ArrayList<Item> itemArrayList = currentRoom.getItems();
+        ArrayList<Item> itemDropped = new ArrayList<>();
+        for (Item item : inventory) {
+            if (item.getName().contains(name)) {
+                itemDropped.add(item);
+                itemArrayList.add(item);
+                System.out.println("You have dropped " + item.getName());
+            }
+
+        }
+        inventory.removeAll(itemDropped);
+    }
+
+    public void printInventory() {
+        if(inventory.isEmpty()){
+        System.out.println("Your inventory is empty.");
+     }else{
+        for (Item item : inventory) {
+            System.out.println(item.getName() + ": " + item.getDescription());
+        }
+        }
+    }
+}
+
+
+
 
