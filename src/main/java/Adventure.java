@@ -7,8 +7,7 @@ public class Adventure {
     }
 
     private Player player;
-    private Room room;
-    //public ArrayList<Item> itemsRoom = room.getItems();
+
     public Adventure() {
         Map map = new Map();
         map.buildMap();
@@ -16,15 +15,41 @@ public class Adventure {
         player = new Player(startingRoom);
 
     }
-
-    public boolean takeItem(String name){
-        return player.takeItem(name);
+//metode kald til Player klasse
+    public void goEast(){
+        player.goEast();
+    }
+    public void goSouth(){
+        player.goSouth();
+    }
+    public void goNorth() {
+        player.goNorth();
     }
 
-
-   /* public void xyzzy(){
-        currentRoom = room1;
-        System.out.println("You just teleported");
+    public void goWest() {
+        player.goWest();
     }
-*/
+    public void takeItem(String name){
+        player.takeItem(name);
+    }
+
+    public void lookAround() {
+        player.lookAround();
+    }
+    public void printInventory(){
+        player.printInventory();
+    }
+
+    public void dropItem(String chosenItem) {
+        player.dropItem(chosenItem);
+    }
+
+    public void turnOnLight() {
+        player.turnOnLight();
+    }
+
+    public void turnOffLight() {
+        player.turnOffLight();
+    }
 }
+

@@ -9,10 +9,18 @@ public class Player {
 
     }
 
-    /*
     Item rock = new Item("rock", "bigger than a pebble");
     Item snake = new Item("snake", "a snake");
-    */
+
+    public void setInventory() {
+        inventory.add(rock);
+        inventory.add(snake);
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
 
     public void goEast() {
         if (currentRoom.east == null) {
@@ -58,17 +66,27 @@ public class Player {
         } else if (!currentRoom.getItems().isEmpty() && currentRoom.getIsLightOn()) {
             System.out.println(currentRoom.getDescription());
 
-            System.out.println("There is following items in the room");
+            System.out.println("There are following items in the room");
 
             for (Item item : currentRoom.getItems()) {
                 System.out.println(item.getName() + " " + item.getDescription());
             }
 
-        } else if (currentRoom.getIsLightOn()) {
+        } else {
             System.out.println(currentRoom.getDescription());
         }
     }
+
     //TODO find item method
+    public ArrayList<Item> findItem(String name) {
+        ArrayList<Item> itemsFound = new ArrayList<>();
+        for (Item item : inventory) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                itemsFound.add(item);
+            }
+        }
+        return itemsFound;
+    }
 
     public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
@@ -99,12 +117,31 @@ public class Player {
     }
 
     public void printInventory() {
-        if(inventory.isEmpty()){
-        System.out.println("Your inventory is empty.");
-     }else{
-        for (Item item : inventory) {
-            System.out.println(item.getName() + ": " + item.getDescription());
+        if (inventory.isEmpty()) {
+            System.out.println("Your inventory is empty.");
+        } else {
+            for (Item item : inventory) {
+                System.out.println(item.getName() + ": " + item.getDescription());
+            }
         }
+    }
+        public void turnOnLight () {
+            ArrayList<Item> torches = findItem("torch");
+
+            if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
+                currentRoom.turnOn();
+                System.out.print("You see ");
+                lookAround();
+            } else if (!inventory.contains(findItem("torch"))) {
+                System.out.println("You need a torch to turn on the light");
+            }else System.out.println("The light is already on.");
+            }
+        public void turnOffLight () {
+            if (currentRoom.getIsLightOn()) {
+                currentRoom.turnOff();
+            } else {
+                System.out.println("The light is already off.");
+            }
         }
     }
 }

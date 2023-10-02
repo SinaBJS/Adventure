@@ -3,11 +3,12 @@ public class Map {
 
 
     public void buildMap() {
-        Item sword = new Item("sword", "a sharp weapon");
-        Item knife = new Item("knife", "a sharp little weapon");
+        Item sword = new Item("sword", ",a sharp weapon");
+        Item knife = new Item("knife", ",a sharp little weapon");
+        Item torch = new Item("torch", ",useful in dark rooms");
 
-        Room room1 = new Room("Room 1", "rum 1", false);
-        Room room2 = new Room("Room 2", "rum 2", true);
+        Room room1 = new Room("Room 1", "rum 1", true);
+        Room room2 = new Room("Room 2", "rum 2", false);
         Room room3 = new Room("Room 3", "rum 3", true);
         Room room4 = new Room("Room 4", "rum 4", true);
         Room room5 = new Room("Room 5", "rum 5", true);
@@ -20,6 +21,7 @@ public class Map {
         //add items to rooms
         room1.addItem(knife);
         room1.addItem(sword);
+        room1.addItem(torch);
         room2.addItem(sword);
         room2.addItem(knife);
 
