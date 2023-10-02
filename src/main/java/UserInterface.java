@@ -20,8 +20,12 @@ public class UserInterface {
                 case "look", "l" -> {
                     player.lookAround();
                 }
-                case "help", "h"->
-                        System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
+                case "help", "h" -> {
+                    System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
+                    System.out.println("Look around you by typing 'look around', 'look' or 'l'");
+                    System.out.println("Turn on the light by typing 'turn on' or 'light on");
+                    System.out.println("Turn off the light by typing 'turn off' or 'light off'");
+                }
                 case "go east", "east", "e" -> {
                     player.goEast();
                     player.lookAround();
