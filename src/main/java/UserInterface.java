@@ -21,7 +21,8 @@ public class UserInterface {
                     player.lookAround();
                 }
                 case "help", "h"->
-                        System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
+                        System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction" + "\n" +
+                                "");
                 case "go east", "east", "e" -> {
                     player.goEast();
                     player.lookAround();
