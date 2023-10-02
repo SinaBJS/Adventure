@@ -9,8 +9,8 @@ public class Player {
 
     }
 
-    /*
-    Item rock = new Item("rock", "bigger than a pebble");
+
+   /* Item rock = new Item("rock", "bigger than a pebble");
     Item snake = new Item("snake", "a snake");
     */
 
@@ -64,11 +64,20 @@ public class Player {
                 System.out.println(item.getName() + " " + item.getDescription());
             }
 
-        } else if (currentRoom.getIsLightOn()) {
+        } else {
             System.out.println(currentRoom.getDescription());
         }
     }
     //TODO find item method
+    public ArrayList<Item> findItem(){
+        ArrayList<Item> itemsFound = new ArrayList<>();
+        for (Item item:inventory) {
+            if (inventory.contains(item) && !itemsFound.contains(item)){
+                itemsFound.add(item);
+            }
+        }
+        return itemsFound;
+    }
 
     public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
