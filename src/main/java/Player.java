@@ -92,7 +92,7 @@ public class Player {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemTaken = new ArrayList<>();
         for (Item item : itemArrayList) {
-            if (item.getName().contains(name)) {
+            if (item.getName().toLowerCase().contains(name.toLowerCase())) {
                 itemTaken.add(item);
                 inventory.add(item);
                 System.out.println("You have taken " + item.getName());
@@ -106,7 +106,7 @@ public class Player {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemDropped = new ArrayList<>();
         for (Item item : inventory) {
-            if (item.getName().contains(name)) {
+            if (item.getName().toLowerCase().contains(name.toLowerCase())) {
                 itemDropped.add(item);
                 itemArrayList.add(item);
                 System.out.println("You have dropped " + item.getName());
@@ -144,7 +144,7 @@ public class Player {
             }
         }
     }
-}
+
 
 
 

@@ -38,7 +38,6 @@ public class Map {
         room4.setNorthRoom(room1);
         startingRoom = room1;
     }
-
     public Room getStartingRoom() {
         return startingRoom;
     }

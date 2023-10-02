@@ -11,14 +11,13 @@ public class UserInterface {
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
 
-        Player player =adventure.getPlayer();
 
         while (true) {
             String userchoice = keyboard.nextLine();
 
             switch (userchoice.trim().toLowerCase()) {
                 case "look", "l" -> {
-                    player.lookAround();
+                    adventure.lookAround();
                 }
                 case "help", "h" -> {
                     System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
@@ -28,20 +27,20 @@ public class UserInterface {
                     System.out.println("Take a look in your inventory by typing 'inventory', 'inv' or 'i'");
                 }
                 case "go east", "east", "e" -> {
-                    player.goEast();
-                    player.lookAround();
+                    adventure.goEast();
+                    adventure.lookAround();
                 }
                 case "go north", "north", "n" -> {
-                    player.goNorth();
-                    player.lookAround();
+                    adventure.goNorth();
+                    adventure.lookAround();
                 }
                 case "go west", "west", "w" -> {
-                    player.goWest();
-                    player.lookAround();
+                    adventure.goWest();
+                    adventure.lookAround();
                 }
                 case "go south", "south", "s" -> {
-                    player.goSouth();
-                    player.lookAround();
+                    adventure.goSouth();
+                    adventure.lookAround();
                 }
                 case "take", "t" -> {
                     System.out.println("What item do you wish to take?");
@@ -51,13 +50,10 @@ public class UserInterface {
                 case "drop", "d" -> {
                     System.out.println("What item do you wish to drop?");
                     String chosenItem = keyboard.nextLine();
-                    player.dropItem(chosenItem);
+                    adventure.dropItem(chosenItem);
                 }
-                case "turn on", "light on" -> {
-
-                }
-                case "inventory", "inv", "i" ->{
-                    player.printInventory();
+                case "inventory", "inv", "i" -> {
+                    adventure.printInventory();
                 }
 
                 case "turn on", "light on" -> {

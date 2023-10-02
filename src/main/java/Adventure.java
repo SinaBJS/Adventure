@@ -1,10 +1,5 @@
-import java.util.ArrayList;
-
 public class Adventure {
 
-    public Player getPlayer() {
-        return player;
-    }
 
     private Player player;
 
@@ -13,6 +8,7 @@ public class Adventure {
         map.buildMap();
         Room startingRoom = map.getStartingRoom();
         player = new Player(startingRoom);
+        player.setInventory();
 
     }
 //metode kald til Player klasse
