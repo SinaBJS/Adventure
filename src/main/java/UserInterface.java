@@ -11,7 +11,7 @@ public class UserInterface {
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
 
-        Player player =adventure.getPlayer();
+        Player player = adventure.getPlayer();
 
         while (true) {
             String userchoice = keyboard.nextLine();
@@ -42,13 +42,13 @@ public class UserInterface {
                     player.goSouth();
                     player.lookAround();
                 }
-                case "take", "t" ->{
+                case "take", "t" -> {
                     System.out.println("What item do you wish to take?");
                     String chosenItem = keyboard.nextLine();
                     player.takeItem(chosenItem);
 
                 }
-                case "drop", "d" ->{
+                case "drop", "d" -> {
                     System.out.println("What item do you wish to take?");
                     String chosenItem = keyboard.nextLine();
                     player.dropItem(chosenItem);
@@ -56,7 +56,7 @@ public class UserInterface {
                 case "turn on", "light on" -> {
 
                 }
-                case "inventory", "inv", "i" ->{
+                case "inventory", "inv", "i" -> {
                     player.printInventory();
                 }
 

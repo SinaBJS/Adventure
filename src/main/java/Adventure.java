@@ -17,6 +17,10 @@ public class Adventure {
 
     }
 
+    public boolean takeItem(String name){
+        return player.takeItem(name);
+    }
+
 
    /* public void xyzzy(){
         currentRoom = room1;
