@@ -78,7 +78,7 @@ public class Player {
     }
 
     //TODO find item method
-    public ArrayList<Item> findItem(String name) {
+    /*public ArrayList<Item> findItem(String name) {
         ArrayList<Item> itemsFound = new ArrayList<>();
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(name)) {
@@ -86,7 +86,22 @@ public class Player {
             }
         }
         return itemsFound;
+    }*/
+
+    public Item getItem(String name)
+    {
+        Item result = null;
+        for(Item item: inventory)
+        {
+            if(name.equalsIgnoreCase(item.getName()))
+            {
+                result = item;
+            }
+        }
+
+        return result;
     }
+
 
     public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
@@ -126,7 +141,7 @@ public class Player {
         }
     }
 
-    public void turnOnLight() {
+    /*public void turnOnLight() {
         ArrayList<Item> torches = findItem("torch");
 
         if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
@@ -136,7 +151,7 @@ public class Player {
         } else if (!inventory.contains(findItem("torch"))) {
             System.out.println("You need a torch to turn on the light");
         } else System.out.println("The light is already on.");
-    }
+    }*/
 
     public void turnOffLight() {
         if (currentRoom.getIsLightOn()) {

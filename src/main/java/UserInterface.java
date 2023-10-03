@@ -57,7 +57,7 @@ public class UserInterface {
                 }
 
                 case "turn on", "light on" -> {
-                    adventure.turnOnLight();
+                    //adventure.turnOnLight();
                 }
 
                 case "turn off", "light off" -> {

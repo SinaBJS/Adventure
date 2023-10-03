@@ -40,9 +40,9 @@ public class Adventure {
         player.dropItem(chosenItem);
     }
 
-    public void turnOnLight() {
+    /*public void turnOnLight() {
         player.turnOnLight();
-    }
+    }*/
 
     public void turnOffLight() {
         player.turnOffLight();
