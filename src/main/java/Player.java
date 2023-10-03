@@ -1,20 +1,23 @@
 import java.util.ArrayList;
 
 public class Player {
+    private int maxHealth = 100;
     private Room currentRoom;
+    private int health;
     ArrayList<Item> inventory = new ArrayList<>();
-
-    public Player(Room startingRoom) {
-        this.currentRoom = startingRoom;
-
-    }
-
+    //starter inventory
     Item rock = new Item("rock", "bigger than a pebble");
-    Item snake = new Item("snake", "a snake");
+    Food healthpotion = new Food("health potion", "heals the player", 20);
+
+
+    public Player(Room startingRoom, int health) {
+        this.currentRoom = startingRoom;
+        this.health = health;
+    }
 
     public void setInventory() {
         inventory.add(rock);
-        inventory.add(snake);
+        inventory.add(healthpotion);
     }
 
     public Room getCurrentRoom() {
@@ -78,7 +81,7 @@ public class Player {
     }
 
     //TODO find item method
-    /*public ArrayList<Item> findItem(String name) {
+    public ArrayList<Item> findItem(String name) {
         ArrayList<Item> itemsFound = new ArrayList<>();
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(name)) {
@@ -86,35 +89,26 @@ public class Player {
             }
         }
         return itemsFound;
-    }*/
-
-    public Item getItem(String name)
-    {
-        Item result = null;
-        for(Item item: inventory)
-        {
-            if(name.equalsIgnoreCase(item.getName()))
-            {
-                result = item;
-            }
-        }
-
-        return result;
     }
 
 
     public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemTaken = new ArrayList<>();
+        boolean itemFound = false;
         for (Item item : itemArrayList) {
             if (item.getName().toLowerCase().contains(name.toLowerCase())) {
                 itemTaken.add(item);
                 inventory.add(item);
                 System.out.println("You have taken " + item.getName());
+                itemFound = true;
             }
-        }
 
+        }
         itemArrayList.removeAll(itemTaken);
+        if (!itemFound) {
+            System.out.println("There is no such item in the room!");
+        }
     }
 
     public void dropItem(String name) {
@@ -126,7 +120,9 @@ public class Player {
                 itemArrayList.add(item);
                 System.out.println("You have dropped " + item.getName());
             }
-
+            if (!itemFound) {
+                System.out.println("There is no such item in your inventory!");
+            }
         }
         inventory.removeAll(itemDropped);
     }
@@ -141,7 +137,8 @@ public class Player {
         }
     }
 
-    /*public void turnOnLight() {
+    //TODO brug getItem method
+    public void turnOnLight() {
         ArrayList<Item> torches = findItem("torch");
 
         if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
@@ -151,7 +148,7 @@ public class Player {
         } else if (!inventory.contains(findItem("torch"))) {
             System.out.println("You need a torch to turn on the light");
         } else System.out.println("The light is already on.");
-    }*/
+    }
 
     public void turnOffLight() {
         if (currentRoom.getIsLightOn()) {
@@ -160,9 +157,43 @@ public class Player {
             System.out.println("The light is already off.");
         }
     }
+
+    public int health() {
+        return health;
+    }
+
+    public void eat(String name) {
+        ArrayList<Item> foodEaten = new ArrayList<>();
+        boolean foundItem = false;
+        for (Item item : inventory) {
+            if (item.getName().equalsIgnoreCase(name) && item instanceof Food) {
+                Food food = (Food) item;
+                foodEaten.add(food);
+                int healthIncrease = food.getHealthPoints();
+                health += healthIncrease;
+                System.out.println("You have consumed a " + name + " and gained " + healthIncrease + "HP");
+                foundItem = true;
+                if (health +healthIncrease > maxHealth){
+                    health = maxHealth;
+                }
+            }
+        }
+        if (!foundItem) {
+            System.out.println("You dont have that in your inventory!");
+        } else {
+            inventory.removeAll(foodEaten);
+        }
+    }
 }
 
 
+     /*else if (!(item instanceof Food)) {
+            System.out.println("You can't eat that!");
+            foundItem = true;
+        }
 
-
-
+    }
+}
+    }
+            }
+*/
