@@ -16,16 +16,20 @@ class PlayerTest {
         item = new Item("item", "itemitem");
         food = new Food("banan", "itemitem", 20);
         player.inventory.add(item);
+        player.inventory.add(food);
 
     }
 
     @Test
     void eat(){
-        player.eat("");
-        int expected = 120;
-        int actual = player.health();
-        assertEquals(expected, actual);
-        assertNull(food);
+        player.eat("banan");
+        int expectedHealth = 120;
+        int actualHealth = player.health();
+        int expectedSize = 1;
+        int actualSize = player.inventory.size();
+
+        assertEquals(expectedHealth, actualHealth);
+        assertEquals(expectedSize,actualSize);
     }
     @Test
     void roomConnection(){
