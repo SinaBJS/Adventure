@@ -81,16 +81,14 @@ public class Player {
     }
 
     //TODO find item method
-    public ArrayList<Item> findItem(String name) {
-        ArrayList<Item> itemsFound = new ArrayList<>();
+    public Item findItem(String itemName) {
         for (Item item : inventory) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                itemsFound.add(item);
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return item;
             }
         }
-        return itemsFound;
+        return null;
     }
-
 
     public void takeItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
@@ -141,9 +139,8 @@ public class Player {
 
     //TODO brug getItem method
     public void turnOnLight() {
-        ArrayList<Item> torches = findItem("torch");
 
-        if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
+        if (!currentRoom.getIsLightOn() && findItem("torch") != null) {
             currentRoom.turnOn();
             System.out.print("You see ");
             lookAround();
@@ -164,33 +161,25 @@ public class Player {
         return health;
     }
 
-    public void eat(String name) {
-       // ArrayList<Item> foodEaten = new ArrayList<>();
-        boolean foundItem = false;
-        for (Item item : inventory) {
-            if (item.getName().equalsIgnoreCase(name) && item instanceof Food) {
-                Food food = (Food) item;
-               // foodEaten.add(food);
-                int healthIncrease = food.getHealthPoints();
-                health += healthIncrease;
-                System.out.println("You have consumed a " + name + " and gained " + healthIncrease + "HP");
-                foundItem = true;
-                //food skal remove
-               //inventory.remove(item);
-                if (health +healthIncrease > maxHealth){
-                    health = maxHealth;
+    public returnMessage eat(String name) {
+        Item item = findItem(name);
+        if (item != null) {
+            if (inventory.contains(item)) {
+                if (item instanceof Food) {
+                    inventory.remove(item);
+                    health += ((Food) item).getHealthPoints();
+                    return returnMessage.OK;
+                } else {
+                    return returnMessage.NOT_THERE;
                 }
-            }else if (item.getName().equalsIgnoreCase(name)){
-                System.out.println("You can't eat that!");
-                foundItem=true;
+            } else {
+                return returnMessage.CANT;
+            }
         }
-        if (!foundItem) {
-            System.out.println("You dont have that in your inventory!");
-        }
-
-        }
-
+        return null;
     }
 }
+
+
 
 

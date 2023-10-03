@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="Food class added">
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="ting">
+      <change afterPath="$PROJECT_DIR$/src/main/java/returnMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
     </list>
-    <list id="5da50f1a-d4e2-4925-b227-dbacae8d5976" name="Changes by sina7" comment="Changes by sina7">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-    </list>
+    <list id="5da50f1a-d4e2-4925-b227-dbacae8d5976" name="Changes by sina7" comment="Changes by sina7" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +21,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -40,19 +41,6 @@
         <option name="url" value="https://github.com/SinaBJS/Adventure.git" />
       </UrlAndAccount>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
-      <ranges>
-        <range start1="167" end1="168" start2="167" end2="168" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="172" end1="173" start2="172" end2="173" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="177" end1="177" start2="177" end2="179" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="180" end1="181" start2="182" end2="185" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="184" end1="189" start2="188" end2="189" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="190" end1="194" start2="190" end2="190" changelist="5da50f1a-d4e2-4925-b227-dbacae8d5976" />
-        <range start1="198" end1="201" start2="194" end2="197" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -91,7 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest">
+  <component name="RunManager" selected="JUnit.PlayerTest.eat">
     <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Adventure" />
       <option name="PACKAGE_NAME" value="" />
@@ -153,7 +141,7 @@
       <workItem from="1695969517495" duration="2957000" />
       <workItem from="1696252653211" duration="643000" />
       <workItem from="1696328640224" duration="11501000" />
-      <workItem from="1696359100880" duration="624000" />
+      <workItem from="1696359100880" duration="2551000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -339,7 +327,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696338850074</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ting">
+      <option name="closed" value="true" />
+      <created>1696360425370</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1696360425370</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Changes by sina7">
+      <option name="closed" value="true" />
+      <created>1696360433388</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696360433388</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,8 +372,9 @@
     <MESSAGE value="Unit test added for getItem method, getItem method added." />
     <MESSAGE value="format" />
     <MESSAGE value="eat method added, unit test for eat method, take item changeed, drop item changed" />
-    <MESSAGE value="Changes by sina7" />
     <MESSAGE value="Food class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Food class added" />
+    <MESSAGE value="ting" />
+    <MESSAGE value="Changes by sina7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by sina7" />
   </component>
 </project>

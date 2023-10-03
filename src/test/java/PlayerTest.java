@@ -21,7 +21,7 @@ class PlayerTest {
 
     @Test
     void eat(){
-        player.eat("banan");
+        player.eat("");
         int expected = 120;
         int actual = player.health();
         assertEquals(expected, actual);
