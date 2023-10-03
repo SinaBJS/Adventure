@@ -7,7 +7,6 @@ class PlayerTest {
     Player player;
     Item item;
     Room room1;
-    Adventure adventure;
     @BeforeEach
     void setUp(){
         room1 = new Room("test", "tester", true);
