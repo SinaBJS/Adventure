@@ -19,12 +19,13 @@ public class UserInterface {
                 case "look", "l" -> {
                     adventure.lookAround();
                 }
-                case "help", "h" -> {
+                case "help" -> {
                     System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                     System.out.println("Look around you by typing 'look around', 'look' or 'l'");
-                    //System.out.println("Turn on the light by typing 'turn on' or 'light on");
-                    //System.out.println("Turn off the light by typing 'turn off' or 'light off'");
+                    System.out.println("Turn on the light by typing 'turn on' or 'light on");
+                    System.out.println("Turn off the light by typing 'turn off' or 'light off'");
                     System.out.println("Take a look in your inventory by typing 'inventory', 'inv' or 'i'");
+                    System.out.println("Check your health by typing 'health");
                 }
                 case "go east", "east", "e" -> {
                     adventure.goEast();
@@ -62,6 +63,15 @@ public class UserInterface {
 
                 case "turn off", "light off" -> {
                     adventure.turnOffLight();
+                }
+                case "health" ->{
+                    System.out.println(adventure.health());
+                    adventure.health();;
+                }
+                case "eat" ->{
+                    System.out.println("What item do you wish to eat?");
+                    String chosenItem = keyboard.nextLine();
+                    adventure.eat(chosenItem);
                 }
 
                 case "exit" -> {

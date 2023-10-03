@@ -7,7 +7,7 @@ public class Adventure {
         Map map = new Map();
         map.buildMap();
         Room startingRoom = map.getStartingRoom();
-        player = new Player(startingRoom);
+        player = new Player(startingRoom, 90);
         player.setInventory();
 
     }
@@ -21,14 +21,16 @@ public class Adventure {
     public void goNorth() {
         player.goNorth();
     }
-
     public void goWest() {
         player.goWest();
     }
+
     public void takeItem(String name){
         player.takeItem(name);
     }
-
+    public void dropItem(String chosenItem) {
+        player.dropItem(chosenItem);
+    }
     public void lookAround() {
         player.lookAround();
     }
@@ -36,9 +38,9 @@ public class Adventure {
         player.printInventory();
     }
 
-    public void dropItem(String chosenItem) {
-        player.dropItem(chosenItem);
-    }
+   public int health(){return player.health();}
+    public void eat(String name){player.eat(name);}
+
 
     public void turnOnLight() {
         player.turnOnLight();

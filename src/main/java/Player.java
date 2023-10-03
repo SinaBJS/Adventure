@@ -114,11 +114,13 @@ public class Player {
     public void dropItem(String name) {
         ArrayList<Item> itemArrayList = currentRoom.getItems();
         ArrayList<Item> itemDropped = new ArrayList<>();
+        boolean itemFound = false;
         for (Item item : inventory) {
             if (item.getName().toLowerCase().contains(name.toLowerCase())) {
                 itemDropped.add(item);
                 itemArrayList.add(item);
                 System.out.println("You have dropped " + item.getName());
+                itemFound = true;
             }
             if (!itemFound) {
                 System.out.println("There is no such item in your inventory!");
