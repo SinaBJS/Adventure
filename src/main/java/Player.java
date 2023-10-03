@@ -125,25 +125,27 @@ public class Player {
             }
         }
     }
-        public void turnOnLight () {
-            ArrayList<Item> torches = findItem("torch");
 
-            if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
-                currentRoom.turnOn();
-                System.out.print("You see ");
-                lookAround();
-            } else if (!inventory.contains(findItem("torch"))) {
-                System.out.println("You need a torch to turn on the light");
-            }else System.out.println("The light is already on.");
-            }
-        public void turnOffLight () {
-            if (currentRoom.getIsLightOn()) {
-                currentRoom.turnOff();
-            } else {
-                System.out.println("The light is already off.");
-            }
+    public void turnOnLight() {
+        ArrayList<Item> torches = findItem("torch");
+
+        if (!currentRoom.getIsLightOn() && !torches.isEmpty()) {
+            currentRoom.turnOn();
+            System.out.print("You see ");
+            lookAround();
+        } else if (!inventory.contains(findItem("torch"))) {
+            System.out.println("You need a torch to turn on the light");
+        } else System.out.println("The light is already on.");
+    }
+
+    public void turnOffLight() {
+        if (currentRoom.getIsLightOn()) {
+            currentRoom.turnOff();
+        } else {
+            System.out.println("The light is already off.");
         }
     }
+}
 
 
 
