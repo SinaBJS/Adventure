@@ -165,33 +165,29 @@ public class Player {
     }
 
     public void eat(String name) {
-        ArrayList<Item> foodEaten = new ArrayList<>();
+       // ArrayList<Item> foodEaten = new ArrayList<>();
         boolean foundItem = false;
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(name) && item instanceof Food) {
                 Food food = (Food) item;
-                foodEaten.add(food);
+               // foodEaten.add(food);
                 int healthIncrease = food.getHealthPoints();
                 health += healthIncrease;
                 System.out.println("You have consumed a " + name + " and gained " + healthIncrease + "HP");
                 foundItem = true;
+                //food skal remove
+               //inventory.remove(item);
                 if (health +healthIncrease > maxHealth){
                     health = maxHealth;
                 }
-            }
+            }else if (item.getName().equalsIgnoreCase(name)){
+                System.out.println("You can't eat that!");
+                foundItem=true;
         }
         if (!foundItem) {
             System.out.println("You dont have that in your inventory!");
-        } else {
-            inventory.removeAll(foodEaten);
         }
-    }
-}
 
-
-     /*else if (!(item instanceof Food)) {
-            System.out.println("You can't eat that!");
-            foundItem = true;
         }
 
     }
