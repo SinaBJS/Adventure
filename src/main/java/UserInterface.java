@@ -1,3 +1,5 @@
+import Items.Weapon;
+
 import java.util.Scanner;
 
 public class UserInterface {
@@ -68,7 +70,7 @@ public class UserInterface {
                     System.out.println(adventure.health());
                     adventure.health();;
                 }
-                case "eat" ->{
+                case "eat" -> {
                     System.out.println("What item do you wish to eat?");
                     String chosenItem = keyboard.nextLine();
                     adventure.eat(chosenItem);

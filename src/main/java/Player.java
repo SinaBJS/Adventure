@@ -1,18 +1,24 @@
+import Items.Food;
+import Items.Item;
+import Items.Weapon;
+
 import java.util.ArrayList;
 
 public class Player {
     private int maxHealth = 100;
     private Room currentRoom;
     private int health;
+    Weapon equippedWeapon;
     ArrayList<Item> inventory = new ArrayList<>();
     //starter inventory
     Item rock = new Item("rock", "bigger than a pebble");
     Food healthpotion = new Food("health potion", "heals the player", 20);
 
 
-    public Player(Room startingRoom, int health) {
+    public Player(Room startingRoom, int health, Weapon equippedWeapon) {
         this.currentRoom = startingRoom;
         this.health = health;
+        this.equippedWeapon=equippedWeapon;
     }
 
     public void setInventory() {

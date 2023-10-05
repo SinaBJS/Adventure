@@ -1,10 +1,15 @@
+import Items.Item;
+import Items.MeleeWeapon;
+import Items.RangedWeapon;
+
 public class Map {
     private Room startingRoom;
 
 
     public void buildMap() {
-        Item sword = new Item("sword", ",a sharp weapon");
-        Item knife = new Item("knife", ",a sharp little weapon");
+        MeleeWeapon sword = new MeleeWeapon("sword", ", a sharp weapon");
+        MeleeWeapon knife = new MeleeWeapon("knife", ", a sharp little weapon");
+        RangedWeapon bow = new RangedWeapon("Bow", ", a powerful ranged weapon", 100, 1);
         Item torch = new Item("torch", ",useful in dark rooms");
 
         Room room1 = new Room("Room 1", "rum 1", true);
@@ -22,6 +27,7 @@ public class Map {
         room1.addItem(knife);
         room1.addItem(sword);
         room1.addItem(torch);
+        room1.addItem(bow);
         room2.addItem(sword);
         room2.addItem(knife);
 
