@@ -125,9 +125,9 @@ public class Player {
                 itemArrayList.add(item);
                 System.out.println("You have dropped " + item.getName());
                 itemFound = true;
-            }
-            if (!itemFound) {
-                System.out.println("There is no such item in your inventory!");
+                if (item.equals(equippedWeapon)) {
+                    equippedWeapon = null;
+                }
             }
         }
         inventory.removeAll(itemDropped);
@@ -218,8 +218,11 @@ public class Player {
         }
 
     public String getEquippedWeaponName() {
-      return equippedWeapon.getName();
-
+        if (equippedWeapon != null) {
+            return equippedWeapon.getName();
+        } else {
+            return  "You do not have a weapon equipped";
+        }
     }
     public returnMessage attack() {
        if(equippedWeapon!=null){
@@ -227,13 +230,16 @@ public class Player {
            return returnMessage.OK;
         }else return returnMessage.CANT;
     }
-    public void attackResult(){
+    public void attackResult() {
         switch (attack()) {
-            case OK -> System.out.println("You attacked");
-            case CANT -> System.out.println("You dont have a weapon!");
+            case CANT -> System.out.println("You dont have a weapon equipped! ");
 
         }
     }
+    public int getRemainingUses(){
+        return equippedWeapon.remainingUses();
+    }
+
 
     public boolean isDead() {
         if (health < 1){

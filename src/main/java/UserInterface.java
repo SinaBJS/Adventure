@@ -81,7 +81,7 @@ public class UserInterface {
                     System.out.println(adventure.equippedWeapon());
                 }
                 case "attack" -> {
-                    adventure.attack();
+                    adventure.attackResult();
 
                 }
                 case "exit" -> {

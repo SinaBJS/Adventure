@@ -2,8 +2,10 @@ package Items;
 
 public abstract class Weapon extends Item {
     protected int uses;
-    public Weapon(String name, String description) {
+    protected double damage;
+    public Weapon(String name, String description, double damage) {
         super(name, description);
+        this.damage=damage;
 
     }
     public abstract void attack();

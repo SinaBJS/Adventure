@@ -57,10 +57,14 @@ public class Adventure {
         player.turnOnLight();
     }
 
-    public void attack(){player.attack();}
+    public void attackResult(){player.attackResult();}
 
     public void turnOffLight() {
         player.turnOffLight();
+    }
+
+    public int remainingUses(){
+        return player.getRemainingUses();
     }
 }
 
