@@ -1,19 +1,17 @@
 package Items;
 
 public class RangedWeapon extends Weapon{
-    private double damage;
-    private int ammo;
-    public RangedWeapon(String name, String description, double damage, int ammo){
-        super(name,description);
-        this.damage = damage;
-        this.ammo = ammo;
+
+    public RangedWeapon(String name, String description,double damage, int uses){
+        super(name,description,damage);
+        this.uses = uses;
 
     }
 
     @Override
     public void attack() {
-        if (ammo > 0){
-            ammo -= 1;
+        if (uses > 0){
+            uses -= 1;
             System.out.println("You fire your weapon");
         }else {
             System.out.println("You do not have any ammo");

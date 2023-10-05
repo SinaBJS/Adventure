@@ -84,6 +84,10 @@ public class UserInterface {
                     adventure.attackResult();
 
                 }
+                case "ammo" ->{
+                    System.out.println("You have:" + adventure.remainingUses() + " remaining ammo");
+
+                }
                 case "exit" -> {
                     System.out.println("Shutting down the program");
                     System.exit(0);

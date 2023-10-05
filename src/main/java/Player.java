@@ -85,8 +85,6 @@ public class Player {
             System.out.println(currentRoom.getDescription());
         }
     }
-
-    //TODO find item method
     public Item findItem(String itemName) {
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(itemName)) {
@@ -101,7 +99,7 @@ public class Player {
         ArrayList<Item> itemTaken = new ArrayList<>();
         boolean itemFound = false;
         for (Item item : itemArrayList) {
-            if (item.getName().toLowerCase().contains(name.toLowerCase())) {
+            if (item.getName().equalsIgnoreCase(name.toLowerCase())) {
                 itemTaken.add(item);
                 inventory.add(item);
                 System.out.println("You have taken " + item.getName());
@@ -120,7 +118,7 @@ public class Player {
         ArrayList<Item> itemDropped = new ArrayList<>();
         boolean itemFound = false;
         for (Item item : inventory) {
-            if (item.getName().toLowerCase().contains(name.toLowerCase())) {
+            if (item.getName().equalsIgnoreCase(name.toLowerCase())) {
                 itemDropped.add(item);
                 itemArrayList.add(item);
                 System.out.println("You have dropped " + item.getName());
@@ -129,6 +127,9 @@ public class Player {
                     equippedWeapon = null;
                 }
             }
+        }
+        if (!itemFound) {
+            System.out.println("There is no such item in your inventory!");
         }
         inventory.removeAll(itemDropped);
     }
@@ -224,6 +225,7 @@ public class Player {
             return  "You do not have a weapon equipped";
         }
     }
+
     public returnMessage attack() {
        if(equippedWeapon!=null){
            equippedWeapon.attack();

@@ -9,8 +9,9 @@ public abstract class Weapon extends Item {
 
     }
     public abstract void attack();
-    public void remainingUses(){
 
+    public int remainingUses(){
+        return uses;
     }
 
 
