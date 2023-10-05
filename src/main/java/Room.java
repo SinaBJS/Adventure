@@ -30,7 +30,7 @@ public class Room {
 
     public void turnOff() {
         this.lightOn = false;
-        System.out.println("You extingiush a torch hanging on the wall, and the light in the room dies");
+        System.out.println("You extinguish a torch hanging on the wall, and the light in the room dies");
     }
 
     public boolean getIsLightOn() {

@@ -18,9 +18,8 @@ public class UserInterface {
             String userchoice = keyboard.nextLine();
 
             switch (userchoice.trim().toLowerCase()) {
-                case "look", "l" -> {
-                    adventure.lookAround();
-                }
+                case "look", "l" -> adventure.lookAround();
+
                 case "help" -> {
                     System.out.println("Type a direction (for example 'go west', 'west' or 'w') to go in that direction");
                     System.out.println("Look around you by typing 'look around', 'look' or 'l'");
@@ -55,33 +54,46 @@ public class UserInterface {
                     String chosenItem = keyboard.nextLine();
                     adventure.dropItem(chosenItem);
                 }
-                case "inventory", "inv", "i" -> {
-                    adventure.printInventory();
-                }
+                case "inventory", "inv", "i" -> adventure.printInventory();
 
-                case "turn on", "light on" -> {
-                    adventure.turnOnLight();
-                }
 
-                case "turn off", "light off" -> {
-                    adventure.turnOffLight();
-                }
-                case "health" ->{
+                case "turn on", "light on" -> adventure.turnOnLight();
+
+
+                case "turn off", "light off" -> adventure.turnOffLight();
+
+                case "health" -> {
                     System.out.println(adventure.health());
-                    adventure.health();;
+                    adventure.health();
                 }
                 case "eat" -> {
                     System.out.println("What item do you wish to eat?");
                     String chosenItem = keyboard.nextLine();
-                    adventure.eat(chosenItem);
-                }
+                    adventure.eatResult(chosenItem);    //TODO test om det virker
 
+                }
+                case "equip" -> {
+                    System.out.println("What weapon do you wish to equip?");
+                    String chosenItem = keyboard.nextLine();
+                    adventure.equipResult(chosenItem);
+                }
+                case "equipment" -> {
+                    System.out.println(adventure.equippedWeapon());
+                }
+                case "attack" -> {
+                    adventure.attack();
+
+                }
                 case "exit" -> {
                     System.out.println("Shutting down the program");
                     System.exit(0);
                 }
             }
+            if (adventure.playerIsDead()) {  //TODO test om det virker
+                System.out.println("YOU DIED!");
+                System.exit(0);
 
+            }
 
         }
     }

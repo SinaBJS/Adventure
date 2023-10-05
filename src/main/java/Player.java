@@ -184,7 +184,66 @@ public class Player {
         }
         return null;
     }
+
+    public void eatResult(String name) {
+        switch (eat(name)) {
+            case OK -> {
+                Item item = findItem(name);
+                System.out.println("You ate " + name + " and gained " + ((Food) item).getHealthPoints() + "HP");
+            }
+            case CANT -> System.out.println("You can not eat that!");
+            case NOT_THERE -> System.out.println("You do not have that in your inventory");
+        }
+    }
+    public returnMessage equipWeapon(String name) {
+        Item item = findItem(name);
+        if (item != null && item instanceof Weapon) {
+            Weapon weapon = (Weapon)item;
+            if (inventory.contains(weapon)) {
+                equippedWeapon = weapon;
+                return returnMessage.OK;
+            } else {
+                return returnMessage.NOT_THERE;
+            }
+        } else {
+            return returnMessage.CANT;
+        }
+    }
+        public void equipResult(String name) {
+            switch (equipWeapon(name)) {
+                case OK -> System.out.println("You equipped " + name);
+                case CANT -> System.out.println("You can not equip that!");
+                case NOT_THERE -> System.out.println("You do not have that in your inventory");
+            }
+        }
+
+    public String getEquippedWeaponName() {
+      return equippedWeapon.getName();
+
+    }
+    public returnMessage attack() {
+       if(equippedWeapon!=null){
+           equippedWeapon.attack();
+           return returnMessage.OK;
+        }else return returnMessage.CANT;
+    }
+    public void attackResult(){
+        switch (attack()) {
+            case OK -> System.out.println("You attacked");
+            case CANT -> System.out.println("You dont have a weapon!");
+
+        }
+    }
+
+    public boolean isDead() {
+        if (health < 1){
+            return true;
+        }
+        return false;
+    }
 }
+
+
 
 
 
