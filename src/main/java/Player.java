@@ -243,7 +243,10 @@ public class Player {
         }
     }
     public int getRemainingUses(){
-        return equippedWeapon.remainingUses();
+        if (!(equippedWeapon == null)){
+            return equippedWeapon.remainingUses();
+        }
+        return 0;
     }
 
 

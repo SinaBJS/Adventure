@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="small changes">
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="made it so you cant take items when the light is off, added arrow then userinput is expected">
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="5da50f1a-d4e2-4925-b227-dbacae8d5976" name="Changes by sina7" comment="Changes by sina7" />
@@ -149,7 +149,7 @@
       <workItem from="1696359100880" duration="2588000" />
       <workItem from="1696362638816" duration="2490000" />
       <workItem from="1696495599427" duration="104000" />
-      <workItem from="1696573967950" duration="3750000" />
+      <workItem from="1696573967950" duration="4212000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Main, adventure og room klasser oprettet">
       <option name="closed" value="true" />
@@ -383,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696577324289</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="made it so you cant take items when the light is off, added arrow then userinput is expected">
+      <option name="closed" value="true" />
+      <created>1696578041670</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1696578041670</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +427,8 @@
     <MESSAGE value="eat method unit test" />
     <MESSAGE value="room descriptions added" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="made it so you cant take items when the light is off, added arrow then userinput is expected" />
+    <option name="LAST_COMMIT_MESSAGE" value="made it so you cant take items when the light is off, added arrow then userinput is expected" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

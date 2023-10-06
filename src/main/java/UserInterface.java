@@ -47,11 +47,13 @@ public class UserInterface {
                 }
                 case "take", "t" -> {
                     System.out.println("What item do you wish to take?");
+                    System.out.print(">");
                     String chosenItem = keyboard.nextLine();
                     adventure.takeItem(chosenItem);
                 }
                 case "drop", "d" -> {
                     System.out.println("What item do you wish to drop?");
+                    System.out.print(">");
                     String chosenItem = keyboard.nextLine();
                     adventure.dropItem(chosenItem);
                 }
@@ -69,12 +71,14 @@ public class UserInterface {
                 }
                 case "eat" -> {
                     System.out.println("What item do you wish to eat?");
+                    System.out.print(">");
                     String chosenItem = keyboard.nextLine();
-                    adventure.eatResult(chosenItem);    //TODO test om det virker
+                    adventure.eatResult(chosenItem);
 
                 }
                 case "equip" -> {
                     System.out.println("What weapon do you wish to equip?");
+                    System.out.print(">");
                     String chosenItem = keyboard.nextLine();
                     adventure.equipResult(chosenItem);
                 }
