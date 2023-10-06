@@ -95,21 +95,25 @@ public class Player {
     }
 
     public void takeItem(String name) {
-        ArrayList<Item> itemArrayList = currentRoom.getItems();
-        ArrayList<Item> itemTaken = new ArrayList<>();
-        boolean itemFound = false;
-        for (Item item : itemArrayList) {
-            if (item.getName().equalsIgnoreCase(name.toLowerCase())) {
-                itemTaken.add(item);
-                inventory.add(item);
-                System.out.println("You have taken " + item.getName());
-                itemFound = true;
-            }
+        if (currentRoom.getIsLightOn()){
+            ArrayList<Item> itemArrayList = currentRoom.getItems();
+            ArrayList<Item> itemTaken = new ArrayList<>();
+            boolean itemFound = false;
+            for (Item item : itemArrayList) {
+                if (item.getName().equalsIgnoreCase(name.toLowerCase())) {
+                    itemTaken.add(item);
+                    inventory.add(item);
+                    System.out.println("You have taken " + item.getName());
+                    itemFound = true;
+                }
 
-        }
-        itemArrayList.removeAll(itemTaken);
-        if (!itemFound) {
-            System.out.println("There is no such item in the room!");
+            }
+            itemArrayList.removeAll(itemTaken);
+            if (!itemFound) {
+                System.out.println("There is no such item in the room!");
+            }
+        }else{
+            System.out.println("You cant find the item when there is no light!");
         }
     }
 

@@ -15,6 +15,7 @@ public class UserInterface {
 
 
         while (true) {
+            System.out.print(">");
             String userchoice = keyboard.nextLine();
 
             switch (userchoice.trim().toLowerCase()) {
