@@ -1,6 +1,4 @@
-import Items.Food;
-import Items.Item;
-import Items.Weapon;
+import Items.*;
 
 import java.util.ArrayList;
 
@@ -9,6 +7,8 @@ public class Player {
     private Room currentRoom;
     private int health;
     Weapon equippedWeapon;
+    Enemy enemy;
+    Player player;
     ArrayList<Item> inventory = new ArrayList<>();
     //starter inventory
     Item rock = new Item("rock", "bigger than a pebble");
