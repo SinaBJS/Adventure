@@ -8,6 +8,7 @@ public class Map {
 
 
     public void buildMap() {
+
         //Items
         MeleeWeapon sword = new MeleeWeapon("sword", ", a sharp weapon", 20);
         MeleeWeapon knife = new MeleeWeapon("knife", ", a sharp little weapon", 10);
@@ -36,6 +37,8 @@ public class Map {
         Room room9 = new Room("Room 9", "The room is swathed in eerie mist, making it difficult to discern the shadows.\n" +
                 "In the corner, a pair of menacing red eyes glow, revealing a lurking enemy. Nearby, a poisoned dart lies next to a mystical staff adorned with runes.", true);
 
+        Enemy troll = new Enemy(room1, 40, knife,"troll", "green monster");
+        room2.addEnemy(troll);
 
         //add items to rooms
         room1.addItem(knife);

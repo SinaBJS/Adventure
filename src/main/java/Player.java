@@ -30,6 +30,9 @@ public class Player {
         return currentRoom;
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
 
     public void goEast() {
         if (currentRoom.east == null) {
@@ -75,12 +78,19 @@ public class Player {
         } else if (!currentRoom.getItems().isEmpty() && currentRoom.getIsLightOn()) {
             System.out.println(currentRoom.getDescription());
 
-            System.out.println("There are following items in the room");
+            System.out.println("There are following items in the room: ");
 
             for (Item item : currentRoom.getItems()) {
                 System.out.println(item.getName() + " " + item.getDescription());
             }
+            if (!currentRoom.getEnemies().isEmpty()){
+                System.out.println("There is following enemies in the room: ");
+                for (Enemy enemy:currentRoom.getEnemies()) {
+                    System.out.println(enemy.getName() + " " + enemy.getDescription());
 
+                }
+
+            }
         } else {
             System.out.println(currentRoom.getDescription());
         }
@@ -89,6 +99,14 @@ public class Player {
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(itemName)) {
                 return item;
+            }
+        }
+        return null;
+    }
+    public Enemy findEnemy(String enemyname){
+        for (Enemy enemy: currentRoom.enemies) {
+            if (enemy.getName().equalsIgnoreCase(enemyname)){
+                return enemy;
             }
         }
         return null;
@@ -228,10 +246,26 @@ public class Player {
     }
 
     public returnMessage attack() {
-       if(equippedWeapon!=null){
-           equippedWeapon.attack();
+        if(currentRoom.enemies.isEmpty())
+        if(equippedWeapon instanceof MeleeWeapon) {
+            int damageTaken = (int) (enemy.getHealth() - equippedWeapon.getDamage());
+            enemy.setHealth(damageTaken);
+           if (!enemy.isDead()){
+               enemy.attack();
+           }
+
+
+           equippedWeapon.use();
            return returnMessage.OK;
-        }else return returnMessage.CANT;
+
+
+        }else if (equippedWeapon instanceof RangedWeapon) {
+
+
+       } else
+            return returnMessage.CANT;
+
+        return null;
     }
 
     public void attackResult() {
