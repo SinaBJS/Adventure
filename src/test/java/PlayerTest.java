@@ -27,7 +27,7 @@ class PlayerTest {
     void eat(){
         player.eat("banan");
         int expectedHealth = 120;
-        int actualHealth = player.health();
+        int actualHealth = player.getHealth();
         int expectedSize = 1;
         int actualSize = player.inventory.size();
 

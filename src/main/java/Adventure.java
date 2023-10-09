@@ -1,5 +1,3 @@
-import Items.Weapon;
-
 public class Adventure {
     private Player player;
 
@@ -38,7 +36,7 @@ public class Adventure {
         player.printInventory();
     }
 
-   public int health(){return player.health();}
+   public int health(){return player.getHealth();}
 
     public boolean playerIsDead(){return player.isDead();}
 

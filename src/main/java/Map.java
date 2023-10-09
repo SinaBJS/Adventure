@@ -8,11 +8,16 @@ public class Map {
 
 
     public void buildMap() {
+        //Items
         MeleeWeapon sword = new MeleeWeapon("sword", ", a sharp weapon", 20);
         MeleeWeapon knife = new MeleeWeapon("knife", ", a sharp little weapon", 10);
         RangedWeapon bow = new RangedWeapon("bow", ", a powerful ranged weapon", 15, 5);
+        RangedWeapon throwingDaggers = new RangedWeapon("throwing daggers", "small daggers you should throw", 20, 3);
+        RangedWeapon warhammer = new RangedWeapon("warhammer", "a big sturdy and powerful hammer", 20, 3);
         Item torch = new Item("torch", ",useful in dark rooms");
 
+
+        //Rooms
         Room room1 = new Room("Room 1", "You find yourself in a dimly lit chamber, the flickering torch on the moss-covered stone wall casting eerie shadows.", true);
         Room room2 = new Room("Room 2", "The room is bathed in a soft, ethereal glow from a mystical orb hanging from the ceiling.\n" +
                 "On a stone altar, you spot a shimmering sword and a vial of healing potion.", false);
@@ -39,6 +44,8 @@ public class Map {
         room1.addItem(bow);
         room2.addItem(sword);
         room2.addItem(knife);
+        room5.addItem(throwingDaggers);
+        room6.addItem(warhammer);
 
 
         //attach rooms

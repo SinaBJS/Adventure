@@ -106,7 +106,6 @@ public class Player {
                     System.out.println("You have taken " + item.getName());
                     itemFound = true;
                 }
-
             }
             itemArrayList.removeAll(itemTaken);
             if (!itemFound) {
@@ -148,9 +147,7 @@ public class Player {
         }
     }
 
-    //TODO brug getItem method
     public void turnOnLight() {
-
         if (!currentRoom.getIsLightOn() && findItem("torch") != null) {
             currentRoom.turnOn();
             System.out.print("You see ");
@@ -168,7 +165,7 @@ public class Player {
         }
     }
 
-    public int health() {
+    public int getHealth() {
         return health;
     }
 
@@ -236,6 +233,7 @@ public class Player {
            return returnMessage.OK;
         }else return returnMessage.CANT;
     }
+
     public void attackResult() {
         switch (attack()) {
             case CANT -> System.out.println("You dont have a weapon equipped! ");
@@ -248,7 +246,6 @@ public class Player {
         }
         return 0;
     }
-
 
     public boolean isDead() {
         if (health < 1){
