@@ -1,8 +1,6 @@
 import Items.Weapon;
 
 public class Adventure {
-
-
     private Player player;
 
     public Adventure() {
@@ -42,8 +40,6 @@ public class Adventure {
 
    public int health(){return player.health();}
 
-    //public void eat(String name){player.eat(name);}
-
     public boolean playerIsDead(){return player.isDead();}
 
     public void eatResult(String name){
@@ -52,7 +48,9 @@ public class Adventure {
     public void equipResult(String name){
         player.equipResult(name);
     }
+
     public String equippedWeapon(){return player.getEquippedWeaponName();}
+
     public void turnOnLight() {
         player.turnOnLight();
     }

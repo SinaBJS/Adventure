@@ -3,8 +3,6 @@ import Items.Weapon;
 import java.util.Scanner;
 
 public class UserInterface {
-
-
     public void start() {
         Scanner keyboard = new Scanner(System.in);
         Adventure adventure = new Adventure();
