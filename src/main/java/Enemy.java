@@ -1,11 +1,14 @@
 import Items.MeleeWeapon;
 import Items.Weapon;
 
-public class Enemy extends Player {
+public class Enemy {
     private String name;
     private String description;
-    public Enemy(Room startingRoom, int health, Weapon equippedWeapon, String name, String description) {
-        super(startingRoom, health, equippedWeapon);
+    private int health;
+    private Weapon equippedWeapon;
+    public Enemy(int health, Weapon equippedWeapon, String name, String description) {
+        this.health = health;
+        this.equippedWeapon = equippedWeapon;
         this.name = name;
         this.description = description;
     }
@@ -14,17 +17,24 @@ public class Enemy extends Player {
         return name;
     }
 
-    @Override
-    public returnMessage attack() {
-        if(equippedWeapon instanceof MeleeWeapon) {
-            int damageTaken = (int) (player.getHealth() - equippedWeapon.getDamage());
-            player.setHealth(damageTaken);
-            return returnMessage.OK;
-        }//lav ranged weapon
-        else return returnMessage.CANT;
+    public Weapon getEquippedWeapon() {
+        return equippedWeapon;
     }
+
 
     public String getDescription() {
         return description;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int newHealth) {
+        health = newHealth;
+    }
+
+    public boolean isDead() {
+        return health <= 1;
     }
 }

@@ -84,8 +84,9 @@ public class UserInterface {
                     System.out.println(adventure.equippedWeapon());
                 }
                 case "attack" -> {
-                    adventure.attackResult();
-
+                    System.out.println("What do you wish to attack?");
+                    String chosenEnemy = keyboard.nextLine();
+                    adventure.attackResult(chosenEnemy);
                 }
                 case "ammo" ->{
                     System.out.println("You have:" + adventure.remainingUses() + " remaining ammo");

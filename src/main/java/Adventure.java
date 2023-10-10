@@ -52,8 +52,11 @@ public class Adventure {
     public void turnOnLight() {
         player.turnOnLight();
     }
+    public void attack(String enemyName){
+        player.attack(enemyName);
+    }
 
-    public void attackResult(){player.attackResult();}
+    public void attackResult(String enemyName){player.attackResult(enemyName);}
 
     public void turnOffLight() {
         player.turnOffLight();

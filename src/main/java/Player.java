@@ -249,33 +249,38 @@ public class Player {
         }
     }
 
-    public returnMessage attack() {
-        if (currentRoom.enemies.isEmpty()) {
+    public returnMessage attack(String enemyName) {
+        Enemy enemy = findEnemy(enemyName);
+        if (enemy != null) {
             if (equippedWeapon instanceof MeleeWeapon) {
                 int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
                 enemy.setHealth(newHealth);
                 if (!enemy.isDead()) {
-                    enemy.attack();
-                }
-                equippedWeapon.use();
-                return returnMessage.OK;
+                    setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
+                    System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
 
-            } else if (equippedWeapon instanceof RangedWeapon) {
-                int newHealth = (int)(enemy.getHealth()- equippedWeapon.getDamage());
-                enemy.setHealth(newHealth);
-                if (!enemy.isDead()){
-                    enemy.attack();
                 }
-                equippedWeapon.use();
                 return returnMessage.OK;
             }
-        } else
+        } else if (equippedWeapon instanceof RangedWeapon) {
+            int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
+            enemy.setHealth(newHealth);
+            if (enemy.isDead()) {
+                setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
+                System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
+                System.out.println("You now have " + getHealth() + " hp");
+            }
+            equippedWeapon.use();
+            return returnMessage.OK;
+        } else if (enemy == null){
+            return returnMessage.NOT_THERE;
+        }
             return returnMessage.CANT;
-        return null;
     }
 
-    public void attackResult() {
-        switch (attack()) {
+
+    public void attackResult(String enemyName) {
+        switch (attack(enemyName)) {
             case CANT -> System.out.println("You dont have a weapon equipped! ");
 
         }

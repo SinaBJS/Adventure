@@ -7,6 +7,5 @@ public class MeleeWeapon extends Weapon {
 
     @Override
     public void use() {
-        System.out.println("You swing your weapon across the room");
     }
 }
