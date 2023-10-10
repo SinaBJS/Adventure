@@ -252,7 +252,7 @@ public class Player {
     public returnMessage attack(String enemyName) {
         Enemy enemy = findEnemy(enemyName);
         if (enemy != null) {
-            if (equippedWeapon instanceof MeleeWeapon) {
+            if (equippedWeapon instanceof MeleeWeapon && !enemy.isDead()) {
                 int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
                 enemy.setHealth(newHealth);
                 System.out.println("You attacked the " + enemyName + " and did " + equippedWeapon.getDamage() + " damage");
@@ -260,31 +260,44 @@ public class Player {
                 if (!enemy.isDead()) {
                     setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
                     System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
-
-                }
+                } else if(enemy.isDead()) {
+                        System.out.println("You killed your enemy!");
+                        currentRoom.addItem(enemy.getEquippedWeapon());
+                        currentRoom.removeEnemy(enemy);
+                    }
+                return returnMessage.OK;
+            } else if (equippedWeapon instanceof RangedWeapon && !enemy.isDead()) {
+                int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
+                enemy.setHealth(newHealth);
+                System.out.println("You attacked the " + enemyName + " and did " + equippedWeapon.getDamage() + " damage");
+                System.out.println("Enemy hp is now: " + enemy.getHealth());
+                if (!enemy.isDead()) {
+                    setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
+                    System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
+                    System.out.println("You now have " + getHealth() + " hp and " + equippedWeapon.remainingUses() + " ammo");
+                } else if(enemy.isDead()) {
+                    System.out.println("You killed your enemy!");
+                    currentRoom.addItem(enemy.getEquippedWeapon());
+                    currentRoom.removeEnemy(enemy);
+                    }
+                
+                equippedWeapon.use();
                 return returnMessage.OK;
             }
-        } else if (equippedWeapon instanceof RangedWeapon) {
-            int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
-            enemy.setHealth(newHealth);
-            if (enemy.isDead()) {
-                setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
-                System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
-                System.out.println("You now have " + getHealth() + " hp");
-            }
-            equippedWeapon.use();
-            return returnMessage.OK;
-        } else if (enemy == null){
+        } else {
             return returnMessage.NOT_THERE;
         }
+        if (equippedWeapon == null) {
             return returnMessage.CANT;
+        }
+        return returnMessage.OK;
     }
 
 
     public void attackResult(String enemyName) {
         switch (attack(enemyName)) {
             case CANT -> System.out.println("You dont have a weapon equipped! ");
-
+            case NOT_THERE -> System.out.println("That enemy isnt in the room! ");
         }
     }
 

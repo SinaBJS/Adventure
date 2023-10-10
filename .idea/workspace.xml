@@ -9,17 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="added Attack enemies.jpg and docs">
+    <list default="true" id="c8666c0e-48b3-4a3c-b87c-6557b480d51b" name="Changes" comment="attack method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/MeleeWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
-    <list id="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" name="Changes by sina7" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    <list id="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" name="Changes by sina7" comment="Changes by sina7">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +51,19 @@
     </option>
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+    <file path="$PROJECT_DIR$/src/main/java/Room.java">
       <ranges>
-        <range start1="251" end1="253" start2="251" end2="254" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="256" end1="256" start2="257" end2="259" changelist="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" />
-        <range start1="257" end1="258" start2="260" end2="263" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="259" end1="260" start2="264" end2="264" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="261" end1="272" start2="265" end2="279" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="273" end1="274" start2="280" end2="280" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
-        <range start1="276" end1="278" start2="282" end2="285" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="86" end1="86" start2="86" end2="87" changelist="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" />
+        <range start1="89" end1="89" start2="90" end2="95" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Enemy.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="2" end1="2" start2="3" end2="5" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
+        <range start1="7" end1="7" start2="10" end2="11" changelist="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" />
+        <range start1="22" end1="22" start2="26" end2="31" changelist="9b9be4f2-5fb8-4bf5-8d0b-3bb9587d8a5e" />
+        <range start1="36" end1="39" start2="45" end2="46" changelist="c8666c0e-48b3-4a3c-b87c-6557b480d51b" />
       </ranges>
     </file>
   </component>
@@ -440,7 +442,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696856037422</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="attack method">
+      <option name="closed" value="true" />
+      <created>1696938109358</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938109358</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Changes by sina7">
+      <option name="closed" value="true" />
+      <created>1696938116532</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938116532</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +490,6 @@
     <MESSAGE value="eat method added, unit test for eat method, take item changeed, drop item changed" />
     <MESSAGE value="Food class added" />
     <MESSAGE value="ting" />
-    <MESSAGE value="Changes by sina7" />
     <MESSAGE value="working eat method, not working unit test of eat method" />
     <MESSAGE value="eat method unit test" />
     <MESSAGE value="room descriptions added" />
@@ -480,7 +497,9 @@
     <MESSAGE value="made it so you cant take items when the light is off, added arrow then userinput is expected" />
     <MESSAGE value="fixed nullpointerexception when calling remainingUses and you have no weapon equipped" />
     <MESSAGE value="added Attack enemies.jpg and docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Attack enemies.jpg and docs" />
+    <MESSAGE value="attack method" />
+    <MESSAGE value="Changes by sina7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by sina7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

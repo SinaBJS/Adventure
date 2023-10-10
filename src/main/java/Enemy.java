@@ -1,5 +1,8 @@
+import Items.Item;
 import Items.MeleeWeapon;
 import Items.Weapon;
+
+import java.util.ArrayList;
 
 public class Enemy {
     private String name;
@@ -34,7 +37,5 @@ public class Enemy {
         health = newHealth;
     }
 
-    public boolean isDead() {
-        return health <= 1;
-    }
+
 }
