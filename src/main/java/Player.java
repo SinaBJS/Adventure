@@ -255,6 +255,8 @@ public class Player {
             if (equippedWeapon instanceof MeleeWeapon) {
                 int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
                 enemy.setHealth(newHealth);
+                System.out.println("You attacked the " + enemyName + " and did " + equippedWeapon.getDamage() + " damage");
+                System.out.println("Enemy hp is now: " + enemy.getHealth());
                 if (!enemy.isDead()) {
                     setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
                     System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
