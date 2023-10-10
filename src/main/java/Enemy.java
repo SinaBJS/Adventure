@@ -8,6 +8,7 @@ public class Enemy {
     private String name;
     private String description;
     private int health;
+
     private Weapon equippedWeapon;
     public Enemy(int health, Weapon equippedWeapon, String name, String description) {
         this.health = health;
@@ -23,6 +24,11 @@ public class Enemy {
     public Weapon getEquippedWeapon() {
         return equippedWeapon;
     }
+
+    public boolean isDead() {
+        return health < 1;
+    }
+
 
 
     public String getDescription() {

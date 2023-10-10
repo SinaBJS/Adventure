@@ -84,6 +84,7 @@ public class Room {
     public void addItem(Item item) {
         items.add(item);
     }
+
     public void addEnemy(Enemy enemy){
         enemies.add(enemy);
     }
