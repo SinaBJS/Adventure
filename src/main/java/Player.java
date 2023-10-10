@@ -18,7 +18,7 @@ public class Player {
     public Player(Room startingRoom, int health, Weapon equippedWeapon) {
         this.currentRoom = startingRoom;
         this.health = health;
-        this.equippedWeapon=equippedWeapon;
+        this.equippedWeapon = equippedWeapon;
     }
 
     public void setInventory() {
@@ -83,9 +83,9 @@ public class Player {
             for (Item item : currentRoom.getItems()) {
                 System.out.println(item.getName() + " " + item.getDescription());
             }
-            if (!currentRoom.getEnemies().isEmpty()){
+            if (!currentRoom.getEnemies().isEmpty()) {
                 System.out.println("There is following enemies in the room: ");
-                for (Enemy enemy:currentRoom.getEnemies()) {
+                for (Enemy enemy : currentRoom.getEnemies()) {
                     System.out.println(enemy.getName() + " " + enemy.getDescription());
 
                 }
@@ -95,6 +95,7 @@ public class Player {
             System.out.println(currentRoom.getDescription());
         }
     }
+
     public Item findItem(String itemName) {
         for (Item item : inventory) {
             if (item.getName().equalsIgnoreCase(itemName)) {
@@ -103,9 +104,10 @@ public class Player {
         }
         return null;
     }
-    public Enemy findEnemy(String enemyname){
-        for (Enemy enemy: currentRoom.enemies) {
-            if (enemy.getName().equalsIgnoreCase(enemyname)){
+
+    public Enemy findEnemy(String enemyname) {
+        for (Enemy enemy : currentRoom.enemies) {
+            if (enemy.getName().equalsIgnoreCase(enemyname)) {
                 return enemy;
             }
         }
@@ -113,7 +115,7 @@ public class Player {
     }
 
     public void takeItem(String name) {
-        if (currentRoom.getIsLightOn()){
+        if (currentRoom.getIsLightOn()) {
             ArrayList<Item> itemArrayList = currentRoom.getItems();
             ArrayList<Item> itemTaken = new ArrayList<>();
             boolean itemFound = false;
@@ -129,7 +131,7 @@ public class Player {
             if (!itemFound) {
                 System.out.println("There is no such item in the room!");
             }
-        }else{
+        } else {
             System.out.println("You cant find the item when there is no light!");
         }
     }
@@ -215,10 +217,11 @@ public class Player {
             case NOT_THERE -> System.out.println("You do not have that in your inventory");
         }
     }
+
     public returnMessage equipWeapon(String name) {
         Item item = findItem(name);
         if (item != null && item instanceof Weapon) {
-            Weapon weapon = (Weapon)item;
+            Weapon weapon = (Weapon) item;
             if (inventory.contains(weapon)) {
                 equippedWeapon = weapon;
                 return returnMessage.OK;
@@ -229,42 +232,45 @@ public class Player {
             return returnMessage.CANT;
         }
     }
-        public void equipResult(String name) {
-            switch (equipWeapon(name)) {
-                case OK -> System.out.println("You equipped " + name);
-                case CANT -> System.out.println("You can not equip that!");
-                case NOT_THERE -> System.out.println("You do not have that in your inventory");
-            }
+
+    public void equipResult(String name) {
+        switch (equipWeapon(name)) {
+            case OK -> System.out.println("You equipped " + name);
+            case CANT -> System.out.println("You can not equip that!");
+            case NOT_THERE -> System.out.println("You do not have that in your inventory");
         }
+    }
 
     public String getEquippedWeaponName() {
         if (equippedWeapon != null) {
             return equippedWeapon.getName();
         } else {
-            return  "You do not have a weapon equipped";
+            return "You do not have a weapon equipped";
         }
     }
 
     public returnMessage attack() {
-        if(currentRoom.enemies.isEmpty())
-        if(equippedWeapon instanceof MeleeWeapon) {
-            int damageTaken = (int) (enemy.getHealth() - equippedWeapon.getDamage());
-            enemy.setHealth(damageTaken);
-           if (!enemy.isDead()){
-               enemy.attack();
-           }
+        if (currentRoom.enemies.isEmpty()) {
+            if (equippedWeapon instanceof MeleeWeapon) {
+                int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
+                enemy.setHealth(newHealth);
+                if (!enemy.isDead()) {
+                    enemy.attack();
+                }
+                equippedWeapon.use();
+                return returnMessage.OK;
 
-
-           equippedWeapon.use();
-           return returnMessage.OK;
-
-
-        }else if (equippedWeapon instanceof RangedWeapon) {
-
-
-       } else
+            } else if (equippedWeapon instanceof RangedWeapon) {
+                int newHealth = (int)(enemy.getHealth()- equippedWeapon.getDamage());
+                enemy.setHealth(newHealth);
+                if (!enemy.isDead()){
+                    enemy.attack();
+                }
+                equippedWeapon.use();
+                return returnMessage.OK;
+            }
+        } else
             return returnMessage.CANT;
-
         return null;
     }
 
@@ -274,18 +280,16 @@ public class Player {
 
         }
     }
-    public int getRemainingUses(){
-        if (!(equippedWeapon == null)){
+
+    public int getRemainingUses() {
+        if (!(equippedWeapon == null)) {
             return equippedWeapon.remainingUses();
         }
         return 0;
     }
 
     public boolean isDead() {
-        if (health < 1){
-            return true;
-        }
-        return false;
+        return health < 1;
     }
 }
 
