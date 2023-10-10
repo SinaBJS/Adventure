@@ -12,8 +12,6 @@ public class RangedWeapon extends Weapon{
     public void use() {
         if (uses > 0){
             uses -= 1;
-        }else {
         }
-
     }
 }
