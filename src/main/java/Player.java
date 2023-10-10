@@ -3,17 +3,14 @@ import Items.*;
 import java.util.ArrayList;
 
 public class Player {
-    private int maxHealth = 100;
     private Room currentRoom;
     private int health;
     Weapon equippedWeapon;
-    Enemy enemy;
-    Player player;
     ArrayList<Item> inventory = new ArrayList<>();
+
     //starter inventory
     Item rock = new Item("rock", "bigger than a pebble");
     Food healthpotion = new Food("health potion", "heals the player", 20);
-
 
     public Player(Room startingRoom, int health, Weapon equippedWeapon) {
         this.currentRoom = startingRoom;
@@ -280,7 +277,7 @@ public class Player {
                     currentRoom.addItem(enemy.getEquippedWeapon());
                     currentRoom.removeEnemy(enemy);
                     }
-                
+
                 equippedWeapon.use();
                 return returnMessage.OK;
             }
