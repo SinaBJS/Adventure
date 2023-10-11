@@ -7,6 +7,7 @@ public class UserInterface {
         Scanner keyboard = new Scanner(System.in);
         Adventure adventure = new Adventure();
 
+        System.out.println("You're the chosen adventurer tasked with recovering the stolen Amulet of Radiance, a cherished treasure of the kingdom, deep within a perilous dungeon. The fate of the realm is in your hands.");
         System.out.println("Type look to look around ");
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
@@ -26,6 +27,11 @@ public class UserInterface {
                     System.out.println("Turn off the light by typing 'turn off' or 'light off'");
                     System.out.println("Take a look in your inventory by typing 'inventory', 'inv' or 'i'");
                     System.out.println("Check your health by typing 'health");
+                    System.out.println("Take an item by typing 'take'");
+                    System.out.println("Drop an item by typing 'drop'");
+                    System.out.println("Equip an item by typing 'equip'");
+                    System.out.println("Attack by typing 'attack'");
+                    System.out.println("You can always go back in the direction you came from if an enemy is too strong!");
                 }
                 case "go east", "east", "e" -> {
                     adventure.goEast();

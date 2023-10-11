@@ -5,7 +5,7 @@ public class Adventure {
         Map map = new Map();
         map.buildMap();
         Room startingRoom = map.getStartingRoom();
-        player = new Player(startingRoom, 90, null);
+        player = new Player(startingRoom, 10, null);
         player.setInventory();
 
     }

@@ -10,45 +10,60 @@ public class Map {
     public void buildMap() {
 
         //Items
-        MeleeWeapon sword = new MeleeWeapon("sword", ", a sharp weapon", 20);
-        MeleeWeapon knife = new MeleeWeapon("knife", ", a sharp little weapon", 10);
-        RangedWeapon bow = new RangedWeapon("bow", ", a powerful ranged weapon", 15, 5);
-        RangedWeapon throwingDaggers = new RangedWeapon("throwing daggers", "small daggers you should throw", 20, 3);
-        RangedWeapon warhammer = new RangedWeapon("warhammer", "a big sturdy and powerful hammer", 20, 3);
+        MeleeWeapon rustySword = new MeleeWeapon("A rusty sword", " a blade showing signs of age and neglect", 10);
+        MeleeWeapon mace = new MeleeWeapon("A powerful mace", "A potent mace with a menacing spiked head.", 30);
+        MeleeWeapon battleAxe = new MeleeWeapon("A battle axe", "A brutal battle axe, with a massive double-edged blade, ready to cleave through foes with devastating force.", 15);
+        MeleeWeapon woodenClub = new MeleeWeapon("A wooden club", "A crude, oversized wooden club, unmistakably the chosen weapon of a formidable troll, bears the scars of countless brutal encounters.", 20);
+        MeleeWeapon longSword = new MeleeWeapon("A long sword", "A finely crafted long sword, its gleaming blade honed to perfection for precise strikes in combat.", 10);
+        MeleeWeapon goldenDagger = new MeleeWeapon("A golden dagger", "A gleaming golden dagger, its ornate hilt and razor-sharp blade reflecting opulence and danger in equal measure.",20);
+        MeleeWeapon magicalSword = new MeleeWeapon("A magical sword","A mystical sword, its blade shimmering with arcane runes, bestows the wielder with the ability to harness and channel the forces of magic.", 50);
+        RangedWeapon bow = new RangedWeapon("A wooden bow", "An elegant bow, expertly designed for precise archery.", 25, 5);
+
         Item torch = new Item("torch", ",useful in dark rooms");
 
 
         //Rooms
-        Room room1 = new Room("Room 1", "You find yourself in a dimly lit chamber, the flickering torch on the moss-covered stone wall casting eerie shadows.", true);
-        Room room2 = new Room("Room 2", "The room is bathed in a soft, ethereal glow from a mystical orb hanging from the ceiling.\n" +
-                "On a stone altar, you spot a shimmering sword and a vial of healing potion.", false);
-        Room room3 = new Room("Room 3", "You enter a chamber shrouded in darkness, but a shimmering crystal chandelier reveals a hidden treasure.\n" +
-                "Across the room, a crossbow and a quiver of arrows await your discovery.", true);
-        Room room4 = new Room("Room 4", "As you step into the room, you hear the ominous growl of a lurking beast.\n" +
-                "A flickering lantern reveals a rusted shield and a bottle of poison antidote.", true);
-        Room room5 = new Room("Room 5", "In this chamber, ancient tomes line dusty shelves, and the scent of forgotten knowledge fills the air.\n" +
-                "You also notice a pair of throwing daggers glinting atop a weathered oak desk.", true);
-        Room room6 = new Room("Room 6", "The room is alive with the soothing sound of trickling water from an underground stream.\n" +
-                "On a moss-covered stone pedestal, a vial of invisibility elixir awaits, alongside a sturdy warhammer.", true);
-        Room room7 = new Room("Room 7", "A mysterious aura envelops the room as a full moon shines through a cracked ceiling.\n" +
-                "On an ornate table, you spot a crystal vial containing a potion of levitation and a sharp silver dagger.", true);
-        Room room8 = new Room("Room 8", "The chamber is eerily silent, save for a faint, ghostly whisper that sends shivers down your spine.\n" +
-                "You find a longbow propped against an ancient crypt and a flask of fire-breathing elixir.", true);
-        Room room9 = new Room("Room 9", "The room is swathed in eerie mist, making it difficult to discern the shadows.\n" +
-                "In the corner, a pair of menacing red eyes glow, revealing a lurking enemy. Nearby, a poisoned dart lies next to a mystical staff adorned with runes.", true);
+        Room room1 = new Room("Room 1", "You enter a dimly lit chamber, the walls adorned with faded murals of long-forgotten heroes, their stories lost to time.", true);
+        Room room2 = new Room("Room 2", "A narrow, ominous corridor stretches before you, the walls bearing intricate, mysterious carvings.", false);
+        Room room3 = new Room("Room 3", "In this chamber, arrow slits are visible in the walls, remnants of battles long past.",true);
+        Room room4 = new Room("Room 4", "You find a small alcove filled with various-sized niches, each containing remnants of past adventurers' belongings.", true);
+        Room room5 = new Room("Room 5", "The final room is illuminated by an ethereal, bluish light, and strange symbols are etched into the floor.", true);
+        Room room6 = new Room("Room 6", "This room has a mosaic floor that tells a story of ancient glory and sorrow, the images fading with age.", true);
+        Room room7 = new Room("Room 7", "The walls in this room are adorned with sconces holding torches, their flames flickering and casting eerie shadows.", true);
+        Room room8 = new Room("Room 8", "Two passageways lead away from this room, one going north and one going west, each marked with cryptic runes that defy easy interpretation.", true);
+        Room room9 = new Room("Room 9", "An imposing statue of a forgotten warrior stands in this room, a silent sentinel over the centuries.", true);
 
-        Enemy troll = new Enemy( 40, knife,"troll", "green monster");
-        room1.addEnemy(troll);
+        //enemies
+        Enemy skeleton = new Enemy( 35, rustySword,"skeleton", "a feeble green skeleton");
+        room2.addEnemy(skeleton);
+
+        Enemy snakeman = new Enemy(50, battleAxe, "snakeman", "a agile enemy, half man half snake, wieleding a battleaxe");
+        room3.addEnemy(snakeman);
+
+        Enemy troll = new Enemy(70, woodenClub, "troll", "a giant troll, stupid but very powerful");
+        room9.addEnemy(troll);
+
+        Enemy assassin = new Enemy(40, goldenDagger, "assassin", "a quick assassin. not very durable but very lethal");
+        room7.addEnemy(assassin);
+
+        Enemy warrior = new Enemy(60,longSword ,"warrior", "A battle-hardened warrior, clad in intricately engraved armor, emanates an aura of unwavering resolve.");
+        room4.addEnemy(warrior);
+
+        Enemy ancientWarrior = new Enemy(150, magicalSword, "Ancient Warrior", "an ancient undead warrior, guarding the amulet" );
+        room5.addEnemy(ancientWarrior);
+
 
         //add items to rooms
-        room1.addItem(knife);
-        room1.addItem(sword);
-        room1.addItem(torch);
-        room1.addItem(bow);
-        room2.addItem(sword);
-        room2.addItem(knife);
-        room5.addItem(throwingDaggers);
-        room6.addItem(warhammer);
+        room1.addItem(rustySword);
+        room3.addItem(bow);
+        room7.addItem(torch);
+        room4.addItem(redPotion);
+        room6.addItem(redPotion);
+        room6.addItem(greenPotion);
+        room9.addItem(mace);
+        room8.addItem(redPotion);
+        room8.addItem(greenPotion);
+        room5.addItem(magicalAmulet);
 
 
         //attach rooms
