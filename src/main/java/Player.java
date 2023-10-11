@@ -83,10 +83,10 @@ public class Player {
             for (Item item : currentRoom.getItems()) {
                 System.out.println(item.getName() + " " + item.getDescription());
             }
-            if (!currentRoom.getEnemies().isEmpty()) {
-                System.out.println("There is following enemies in the room: ");
-                for (Enemy enemy : currentRoom.getEnemies()) {
-                    System.out.println(enemy.getName() + " " + enemy.getDescription());
+        } else if (!currentRoom.getEnemies().isEmpty()) {
+            System.out.println("There is following enemies in the room: ");
+            for (Enemy enemy : currentRoom.getEnemies()) {
+                System.out.println(enemy.getName() + " " + enemy.getDescription());
 
             }
 

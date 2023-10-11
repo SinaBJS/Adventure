@@ -1,6 +1,3 @@
-import Items.Weapon;
-
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class UserInterface {
