@@ -6,11 +6,14 @@ public class Player {
     private Room currentRoom;
     private int health;
     Weapon equippedWeapon;
-    ArrayList<Item> inventory = new ArrayList<>();
+
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     //starter inventory
     Item rock = new Item("rock", "bigger than a pebble");
     Food healthpotion = new Food("health potion", "heals the player", 20);
+
+
 
     public Player(Room startingRoom, int health, Weapon equippedWeapon) {
         this.currentRoom = startingRoom;
@@ -21,6 +24,7 @@ public class Player {
     public void setInventory() {
         inventory.add(rock);
         inventory.add(healthpotion);
+
     }
 
     public Room getCurrentRoom() {
@@ -185,30 +189,26 @@ public class Player {
     public int getHealth() {
         return health;
     }
-
     public returnMessage eat(String name) {
         Item item = findItem(name);
         if (item != null) {
-            if (inventory.contains(item)) {
-                if (item instanceof Food) {
-                    inventory.remove(item);
-                    health += ((Food) item).getHealthPoints();
-                    return returnMessage.OK;
-                } else {
-                    return returnMessage.NOT_THERE;
-                }
+            if (inventory.contains(item) && item instanceof Food) {
+                return returnMessage.OK;
             } else {
                 return returnMessage.CANT;
             }
+        }else{
+        return returnMessage.NOT_THERE;
         }
-        return null;
     }
 
     public void eatResult(String name) {
         switch (eat(name)) {
             case OK -> {
                 Item item = findItem(name);
-                System.out.println("You ate " + name + " and gained " + ((Food) item).getHealthPoints() + "HP");
+                System.out.println("You consumed " + name + " and gained " + ((Food) item).getHealthPoints() + " HP");
+                health += ((Food) item).getHealthPoints();
+                inventory.remove(item);
             }
             case CANT -> System.out.println("You can not eat that!");
             case NOT_THERE -> System.out.println("You do not have that in your inventory");
@@ -298,6 +298,7 @@ public class Player {
         }
     }
 
+
     public int getRemainingUses() {
         if (!(equippedWeapon == null)) {
             return equippedWeapon.remainingUses();
@@ -308,6 +309,15 @@ public class Player {
     public boolean isDead() {
         return health < 1;
     }
+
+    public boolean victory(){
+        if(inventory.contains(findItem("Magical Amulet"))){
+            inventory.remove(findItem("Magical Amulet"));
+            return true;
+        }
+        return false;
+    }
+
 }
 
 

@@ -108,6 +108,17 @@ public class UserInterface {
                 System.exit(0);
 
             }
+            if (adventure.victory()){
+                System.out.println("Congratulations! you have succeeded in obtaining the magical amulet.");
+                System.out.println("Do you want to leave the game [Yes/No]");
+                String userInput = keyboard.nextLine();
+                if(userInput.equalsIgnoreCase("yes")){
+                    System.exit(0);
+                } else if (userInput.equalsIgnoreCase("no")) {
+
+                    System.out.println("Okay! You can exit the game by typing 'exit' when you have finished your adventures,");
+                }
+            }
 
         }
     }

@@ -5,7 +5,7 @@ public class Adventure {
         Map map = new Map();
         map.buildMap();
         Room startingRoom = map.getStartingRoom();
-        player = new Player(startingRoom, 10, null);
+        player = new Player(startingRoom, 100, null);
         player.setInventory();
 
     }
@@ -39,6 +39,7 @@ public class Adventure {
    public int health(){return player.getHealth();}
 
     public boolean playerIsDead(){return player.isDead();}
+    public boolean victory(){return player.victory();}
 
     public void eatResult(String name){
         player.eatResult(name);
