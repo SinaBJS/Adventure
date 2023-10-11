@@ -7,7 +7,7 @@ public class Map {
     public void buildMap() {
 
         //Items
-        MeleeWeapon rustySword = new MeleeWeapon("Rusty sword", " a blade showing signs of age and neglect", 5);
+        MeleeWeapon rustySword = new MeleeWeapon("Rusty sword", " a blade showing signs of age and neglect", 10);
         MeleeWeapon mace = new MeleeWeapon("Powerful mace", "A potent mace with a menacing spiked head.", 30);
         MeleeWeapon battleAxe = new MeleeWeapon("Battle axe", "A brutal battle axe, with a massive double-edged blade, ready to cleave through foes with devastating force.", 15);
         MeleeWeapon woodenClub = new MeleeWeapon("Wooden club", "A crude, oversized wooden club, unmistakably the chosen weapon of a formidable troll, bears the scars of countless brutal encounters.", 20);
@@ -37,6 +37,7 @@ public class Map {
         Enemy skeleton = new Enemy( 35, rustySword,"skeleton", "a feeble green skeleton");
         room2.addEnemy(skeleton);
 
+
         Enemy snakeman = new Enemy(50, battleAxe, "snakeman", "a agile enemy, half man half snake, wieleding a battleaxe");
         room3.addEnemy(snakeman);
 
@@ -55,7 +56,6 @@ public class Map {
 
         //add items to rooms
         room1.addItem(rustySword);
-        room1.addItem(magicalAmulet);
         room3.addItem(bow);
         room7.addItem(torch);
         room4.addItem(redPotion);

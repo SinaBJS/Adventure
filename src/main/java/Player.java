@@ -10,9 +10,8 @@ public class Player {
     private ArrayList<Item> inventory = new ArrayList<>();
 
     //starter inventory
-    Item rock = new Item("rock", "bigger than a pebble");
+    RangedWeapon rock = new RangedWeapon("rock", "bigger than a pebble", 5, 15);
     Food healthpotion = new Food("health potion", "heals the player", 20);
-
 
 
     public Player(Room startingRoom, int health, Weapon equippedWeapon) {
@@ -89,9 +88,9 @@ public class Player {
                 for (Enemy enemy : currentRoom.getEnemies()) {
                     System.out.println(enemy.getName() + " " + enemy.getDescription());
 
-                }
-
             }
+
+
         } else {
             System.out.println(currentRoom.getDescription());
         }
@@ -189,6 +188,7 @@ public class Player {
     public int getHealth() {
         return health;
     }
+
     public returnMessage eat(String name) {
         Item item = findItem(name);
         if (item != null) {
@@ -197,8 +197,8 @@ public class Player {
             } else {
                 return returnMessage.CANT;
             }
-        }else{
-        return returnMessage.NOT_THERE;
+        } else {
+            return returnMessage.NOT_THERE;
         }
     }
 
@@ -257,11 +257,11 @@ public class Player {
                 if (!enemy.isDead()) {
                     setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
                     System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
-                } else if(enemy.isDead()) {
-                        System.out.println("You killed your enemy!");
-                        currentRoom.addItem(enemy.getEquippedWeapon());
-                        currentRoom.removeEnemy(enemy);
-                    }
+                } else if (enemy.isDead()) {
+                    System.out.println("You killed your enemy!");
+                    currentRoom.addItem(enemy.getEquippedWeapon());
+                    currentRoom.removeEnemy(enemy);
+                }
                 return returnMessage.OK;
             } else if (equippedWeapon instanceof RangedWeapon && !enemy.isDead()) {
                 int newHealth = (int) (enemy.getHealth() - equippedWeapon.getDamage());
@@ -272,11 +272,11 @@ public class Player {
                     setHealth(getHealth() - (int) enemy.getEquippedWeapon().getDamage());
                     System.out.println("The enemy atttacked you for: " + enemy.getEquippedWeapon().getDamage() + " damage");
                     System.out.println("You now have " + getHealth() + " hp and " + equippedWeapon.remainingUses() + " ammo");
-                } else if(enemy.isDead()) {
+                } else if (enemy.isDead()) {
                     System.out.println("You killed your enemy!");
                     currentRoom.addItem(enemy.getEquippedWeapon());
                     currentRoom.removeEnemy(enemy);
-                    }
+                }
 
                 equippedWeapon.use();
                 return returnMessage.OK;
@@ -310,8 +310,8 @@ public class Player {
         return health < 1;
     }
 
-    public boolean victory(){
-        if(inventory.contains(findItem("Magical Amulet"))){
+    public boolean victory() {
+        if (inventory.contains(findItem("Magical Amulet"))) {
             inventory.remove(findItem("Magical Amulet"));
             return true;
         }
