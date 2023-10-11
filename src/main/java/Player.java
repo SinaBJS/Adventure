@@ -90,7 +90,8 @@ public class Player {
             for (Enemy enemy : currentRoom.getEnemies()) {
                 System.out.println(enemy.getName() + " " + enemy.getDescription());
             }
-
+        }if (currentRoom.getEnemies().isEmpty() && currentRoom.getItems().isEmpty() && currentRoom.getIsLightOn()){
+            System.out.println(currentRoom.getDescription());
         }
     }
 
