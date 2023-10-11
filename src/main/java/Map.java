@@ -13,14 +13,14 @@ public class Map {
         MeleeWeapon woodenClub = new MeleeWeapon("Wooden club", "A crude, oversized wooden club, unmistakably the chosen weapon of a formidable troll, bears the scars of countless brutal encounters.", 20);
         MeleeWeapon longSword = new MeleeWeapon("Long sword", "A finely crafted long sword, its gleaming blade honed to perfection for precise strikes in combat.", 15);
         MeleeWeapon goldenDagger = new MeleeWeapon("Golden dagger", "A gleaming golden dagger, its ornate hilt and razor-sharp blade reflecting opulence and danger in equal measure.",20);
-        MeleeWeapon magicalSword = new MeleeWeapon("Magical sword","A mystical sword, its blade shimmering with arcane runes, bestows the wielder with the ability to harness and channel the forces of magic.", 40);
+        MeleeWeapon magicalSword = new MeleeWeapon("Magical sword","A mystical sword, its blade shimmering with arcane runes, bestows the wielder with the ability to harness and channel the forces of magic.", 30);
         RangedWeapon bow = new RangedWeapon("Wooden bow", "An elegant bow, expertly designed for precise archery.", 25, 5);
 
         Item torch = new Item("torch", ",useful in dark rooms");
         Item magicalAmulet = new Item("Magical amulet", "An enchanted amulet, pulsating with an otherworldly energy, grants its wearer extraordinary powers over the elements and the unseen.");
 
-        Food greenPotion = new Food("A green potion", "A repulsive, green potion exudes an eerie glow, emanating an unsettling odor of decay and mystery.", -20);
-        Food redPotion = new Food("A red potion", "A nourishing red potion glistens with a tempting allure, promising rejuvenation and vitality.", 30);
+        Food greenPotion = new Food("Green Potion", "A repulsive, green potion exudes an eerie glow, emanating an unsettling odor of decay and mystery.", -20);
+        Food redPotion = new Food("Red Potion", "A nourishing red potion glistens with a tempting allure, promising rejuvenation and vitality.", 30);
 
         //Rooms
         Room room1 = new Room("Room 1", "You enter a dimly lit chamber, the walls adorned with faded murals of long-forgotten heroes, their stories lost to time.", true);
@@ -50,7 +50,7 @@ public class Map {
         Enemy warrior = new Enemy(60,longSword ,"warrior", "A battle-hardened warrior, clad in intricately engraved armor, emanates an aura of unwavering resolve.");
         room4.addEnemy(warrior);
 
-        Enemy ancientWarrior = new Enemy(150, magicalSword, "Ancient Warrior", "an ancient undead warrior, guarding the amulet" );
+        Enemy ancientWarrior = new Enemy(100, magicalSword, "Ancient Warrior", "an ancient undead warrior, guarding the amulet" );
         room5.addEnemy(ancientWarrior);
 
 

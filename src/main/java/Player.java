@@ -11,7 +11,7 @@ public class Player {
 
     //starter inventory
     RangedWeapon rock = new RangedWeapon("rock", "bigger than a pebble", 5, 15);
-    Food healthpotion = new Food("health potion", "heals the player", 20);
+    Food healthpotion = new Food("Health Potion", "heals the player", 35);
 
 
     public Player(Room startingRoom, int health, Weapon equippedWeapon) {
@@ -85,7 +85,7 @@ public class Player {
             }
         }if (!currentRoom.getEnemies().isEmpty() && currentRoom.getIsLightOn()) {
             System.out.println(currentRoom.getDescription());
-            
+
             System.out.println("There are following enemies in the room: ");
             for (Enemy enemy : currentRoom.getEnemies()) {
                 System.out.println(enemy.getName() + " " + enemy.getDescription());

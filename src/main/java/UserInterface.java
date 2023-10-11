@@ -6,6 +6,7 @@ public class UserInterface {
         Adventure adventure = new Adventure();
 
         System.out.println("You're the chosen adventurer tasked with recovering the stolen Amulet of Radiance, a cherished treasure of the kingdom, deep within a perilous dungeon. The fate of the realm is in your hands.");
+        adventure.lookAround();
         System.out.println("Type look to look around ");
         System.out.println("Type help for instructions");
         System.out.println("Type exit to shutdown the program");
