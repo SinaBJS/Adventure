@@ -1,5 +1,6 @@
 import Items.Weapon;
 
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -103,10 +104,9 @@ public class UserInterface {
                     System.exit(0);
                 }
             }
-            if (adventure.playerIsDead()) {  //TODO test om det virker
+            if (adventure.playerIsDead()) {
                 System.out.println("YOU DIED!");
                 System.exit(0);
-
             }
             if (adventure.victory()){
                 System.out.println("Congratulations! you have succeeded in obtaining the magical amulet.");

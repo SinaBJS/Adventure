@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Adventure {
     private Player player;
 
@@ -66,5 +68,6 @@ public class Adventure {
     public int remainingUses(){
         return player.getRemainingUses();
     }
+
 }
 
