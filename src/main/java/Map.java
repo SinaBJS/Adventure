@@ -1,7 +1,4 @@
-import Items.Item;
-import Items.MeleeWeapon;
-import Items.RangedWeapon;
-import Items.Weapon;
+import Items.*;
 
 public class Map {
     private Room startingRoom;
@@ -20,7 +17,10 @@ public class Map {
         RangedWeapon bow = new RangedWeapon("A wooden bow", "An elegant bow, expertly designed for precise archery.", 25, 5);
 
         Item torch = new Item("torch", ",useful in dark rooms");
+        Item magicalAmulet = new Item("An magical amulet", "An enchanted amulet, pulsating with an otherworldly energy, grants its wearer extraordinary powers over the elements and the unseen.");
 
+        Food greenPotion = new Food("A green potion", "A repulsive, green potion exudes an eerie glow, emanating an unsettling odor of decay and mystery.", -20);
+        Food redPotion = new Food("A red potion", "A nourishing red potion glistens with a tempting allure, promising rejuvenation and vitality.", 30);
 
         //Rooms
         Room room1 = new Room("Room 1", "You enter a dimly lit chamber, the walls adorned with faded murals of long-forgotten heroes, their stories lost to time.", true);
