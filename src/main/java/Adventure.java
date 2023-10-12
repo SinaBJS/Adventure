@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-
 public class Adventure {
-    private Player player;
+    private final Player player;
 
     public Adventure() {
         Map map = new Map();
@@ -54,9 +52,6 @@ public class Adventure {
 
     public void turnOnLight() {
         player.turnOnLight();
-    }
-    public void attack(String enemyName){
-        player.attack(enemyName);
     }
 
     public void attackResult(String enemyName){player.attackResult(enemyName);}

@@ -7,7 +7,7 @@ public class Player {
     private int health;
     Weapon equippedWeapon;
 
-    private ArrayList<Item> inventory = new ArrayList<>();
+    ArrayList<Item> inventory = new ArrayList<>();
 
     //starter inventory
     RangedWeapon rock = new RangedWeapon("rock", "bigger than a pebble", 5, 15);
@@ -26,9 +26,6 @@ public class Player {
 
     }
 
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
 
     public void setHealth(int health) {
         this.health = health;
@@ -104,9 +101,9 @@ public class Player {
         return null;
     }
 
-    public Enemy findEnemy(String enemyname) {
+    public Enemy findEnemy(String enemyName) {
         for (Enemy enemy : currentRoom.enemies) {
-            if (enemy.getName().equalsIgnoreCase(enemyname)) {
+            if (enemy.getName().equalsIgnoreCase(enemyName)) {
                 return enemy;
             }
         }
@@ -216,7 +213,7 @@ public class Player {
 
     public returnMessage equipWeapon(String name) {
         Item item = findItem(name);
-        if (item != null && item instanceof Weapon) {
+        if (item instanceof Weapon) {
             Weapon weapon = (Weapon) item;
             if (inventory.contains(weapon)) {
                 equippedWeapon = weapon;
