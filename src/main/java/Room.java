@@ -37,18 +37,10 @@ public class Room {
     public boolean getIsLightOn() {
         return lightOn;
     }
-    public void setLightOn(boolean lightOn) {
-        this.lightOn = lightOn;
-    }
-
 
 
     public String getDescription() {
         return description;
-    }
-
-    public String getName() {
-        return name;
     }
 
 
