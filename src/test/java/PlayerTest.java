@@ -40,6 +40,6 @@ class PlayerTest {
 
         room1.setWestRoom(room2);
 
-        assertEquals(room1.getName(), room2.east.getName());
+        assertEquals(room1.name, room2.east.name);
     }
 }
